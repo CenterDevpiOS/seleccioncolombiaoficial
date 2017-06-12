@@ -16,6 +16,8 @@ class NewsViewController: UIViewController{
     @IBOutlet weak var bannerImageView: UIImageView!
     @IBOutlet weak var tableNews: UITableView!
     
+    var refreshControl: UIRefreshControl!
+    
     var selectedNews : News?
     
     var newsFromTable = [News](){
@@ -30,7 +32,9 @@ class NewsViewController: UIViewController{
         
         bannerImageView.isHidden = true
         
+        navigationController?.navigationBar.isHidden = true
         
+        setRefreshControl()
         askForNews()
     }
     
@@ -93,6 +97,14 @@ class NewsViewController: UIViewController{
         
     }
     
+    func setRefreshControl () {
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(askForNews), for: UIControlEvents.valueChanged)
+        tableNews.addSubview(refreshControl)
+    }
+    
     func loadImageBanner() {
         Alamofire.request("http://fcf.2waysports.com/2waysports/Colombia/Noticias/banner.png").validate().responseData { (data) in
             
@@ -133,7 +145,10 @@ extension NewsViewController {
             guard let news = newsFromNetwork else {
                 return
             }
+            
+            self.newsFromTable.removeAll()
             self.newsFromTable = news
+            self.refreshControl.endRefreshing()
             self.tableNews.reloadData()
 
         })
@@ -161,6 +176,14 @@ extension NewsViewController : UITableViewDelegate {
             case .noType:
                 break
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 320
     }
 }
 

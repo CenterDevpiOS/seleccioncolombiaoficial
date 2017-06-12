@@ -42,7 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2017-06-12-PHOTO-00000354.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2sq-gv-gCY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu App Selecccion Colombia 2-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="2sq-gv-gCY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65m-4i-hZE">
@@ -79,7 +79,7 @@
         <!--News View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="homeVC" id="BYZ-38-t0r" customClass="NewsViewController" customModule="Seleccion_Colombia_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewsViewController" customModule="Seleccion_Colombia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -128,7 +128,7 @@
                                                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entérate cómo le fue a nuestra Selección de Colombia" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPs-iZ-NEs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entérate cómo le fue a nuestra Selección de Colombia" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPs-iZ-NEs">
                                                     <rect key="frame" x="18" y="221.5" width="349" height="46.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -252,6 +252,8 @@
                             <constraint firstItem="3Hd-Xj-3uA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="slt-sB-IHz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qz4-Z1-dgA"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bannerImageView" destination="cvm-EH-dpb" id="foU-HG-XJw"/>
                         <outlet property="tableNews" destination="ZbE-wl-2YD" id="J8l-Gi-hzs"/>
@@ -261,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+            <point key="canvasLocation" x="2852" y="129.98500749625188"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="Lfk-st-ymg">
@@ -310,7 +312,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ea-Mf-gzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KVa-4R-dJF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="-537.48125937031489"/>
+            <point key="canvasLocation" x="2687" y="-545"/>
         </scene>
         <!--Detail News View Controller-->
         <scene sceneID="LB9-10-tus">
@@ -336,10 +338,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-gf-MuC">
                                         <rect key="frame" x="23" y="7" width="30" height="30"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-Th-MG7">
-                                        <rect key="frame" x="20" y="4" width="35" height="37"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Condensed" family="Helvetica" pointSize="17"/>
-                                        <state key="normal" title="Atrás">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-Th-MG7">
+                                        <rect key="frame" x="8" y="9" width="42" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="AEJ-uO-ZX1"/>
+                                            <constraint firstAttribute="width" constant="42" id="XfM-Cn-YN0"/>
+                                        </constraints>
+                                        <state key="normal" image="_back_light">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -350,7 +355,7 @@
                                 <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="JhE-Th-MG7" firstAttribute="centerY" secondItem="Wom-ww-j7o" secondAttribute="centerY" id="Ajm-0b-Zz3"/>
-                                    <constraint firstItem="JhE-Th-MG7" firstAttribute="leading" secondItem="WvP-LH-Nq2" secondAttribute="leading" constant="20" id="RcW-BS-70f"/>
+                                    <constraint firstItem="JhE-Th-MG7" firstAttribute="leading" secondItem="WvP-LH-Nq2" secondAttribute="leading" constant="8" id="RcW-BS-70f"/>
                                     <constraint firstItem="Wom-ww-j7o" firstAttribute="centerY" secondItem="WvP-LH-Nq2" secondAttribute="centerY" id="XRx-dp-WeG"/>
                                     <constraint firstItem="Wom-ww-j7o" firstAttribute="centerX" secondItem="WvP-LH-Nq2" secondAttribute="centerX" id="ern-JI-w2K"/>
                                     <constraint firstItem="bgT-gf-MuC" firstAttribute="centerY" secondItem="WvP-LH-Nq2" secondAttribute="centerY" id="kaT-dY-9Ds"/>
@@ -473,7 +478,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yom-Zc-YmI" sceneMemberID="firstResponder"/>
                 <exit id="0ZS-FA-MTr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="134.48275862068968"/>
+            <point key="canvasLocation" x="3624.8000000000002" y="126.38680659670166"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="5RX-0r-ybu">
@@ -504,10 +509,29 @@
             </objects>
             <point key="canvasLocation" x="-849" y="137"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tnn-ML-VfN">
+            <objects>
+                <navigationController storyboardIdentifier="homeVC" automaticallyAdjustsScrollViewInsets="NO" id="FGK-fb-HBi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hlr-ZQ-Hhj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OQw-Fh-fLN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awe-CG-Hsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912.8" y="129.98500749625188"/>
+        </scene>
     </scenes>
     <resources>
         <image name="180X180" width="180" height="180"/>
-        <image name="2017-06-12-PHOTO-00000354.jpg" width="540" height="960"/>
+        <image name="Menu App Selecccion Colombia 2-01.png" width="608" height="1080"/>
+        <image name="_back_light" width="20" height="20"/>
         <image name="barra inferior" width="584" height="92"/>
         <image name="logo movistar-1" width="96" height="51"/>
     </resources>
