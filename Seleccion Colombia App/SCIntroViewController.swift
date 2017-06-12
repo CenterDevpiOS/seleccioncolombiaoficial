@@ -29,7 +29,7 @@ class SCIntroViewController: AVPlayerViewController, CAAnimationDelegate {
         self.player = player
         self.player?.play()
         
-        
+        AppUtility.lockOrientation(.portrait)
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying(note:)),
                                                name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem)
         

@@ -24,6 +24,12 @@ class WebViewController: UIViewController {
         
         webView.loadRequest(request)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AppUtility.lockOrientation(.all)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

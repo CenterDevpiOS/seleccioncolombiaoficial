@@ -38,6 +38,9 @@ class NewsViewController: UIViewController{
         
         loadImageBanner()
         
+        AppUtility.lockOrientation(.portrait)
+        
+        
 //        DispatchQueue.once(token: "com.vectorform.test") {
 //            
 //            let introVC = self.storyboard?.instantiateViewController(withIdentifier: "SCIntroViewController") as! SCIntroViewController

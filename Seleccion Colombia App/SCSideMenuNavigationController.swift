@@ -15,8 +15,19 @@ class SCSideMenuNavigationController: UISideMenuNavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        SideMenuManager.menuAnimationBackgroundColor = UIColor(red: 255/255, green: 200/255, blue: 27/255, alpha: 1)
-        SideMenuManager.menuWidth = max(round(min((self.view.frame.width), (self.view.frame.height)) * 0.85), 240)
+        SideMenuManager.menuAnimationBackgroundColor = UIColor.clear
+        SideMenuManager.menuWidth = max(round(min((self.view.frame.width), (self.view.frame.height)) * 1), 240)
+        
+        SideMenuManager.menuFadeStatusBar = true
+        
+       
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+         AppUtility.lockOrientation(.portrait)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +35,6 @@ class SCSideMenuNavigationController: UISideMenuNavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
