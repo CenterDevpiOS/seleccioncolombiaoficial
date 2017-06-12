@@ -29,18 +29,20 @@ class NewsViewController: UIViewController{
         super.viewDidLoad()
         
         bannerImageView.isHidden = true
-        loadImageBanner()
+        
         
         askForNews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        DispatchQueue.once(token: "com.vectorform.test") {
-            
-            let introVC = self.storyboard?.instantiateViewController(withIdentifier: "SCIntroViewController") as! SCIntroViewController
-            self.present(introVC, animated: true, completion: nil)
-        }
+        loadImageBanner()
+        
+//        DispatchQueue.once(token: "com.vectorform.test") {
+//            
+//            let introVC = self.storyboard?.instantiateViewController(withIdentifier: "SCIntroViewController") as! SCIntroViewController
+//            self.present(introVC, animated: true, completion: nil)
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,6 +64,30 @@ class NewsViewController: UIViewController{
             
             vc.url = sender as! String
         }
+    }
+    
+
+    @IBAction func viewDetailView(_ sender: UIButton) {
+        
+        let buttonPosition = sender.convert(CGPoint.zero, to: self.tableNews)
+        let indexPath = self.tableNews.indexPathForRow(at: buttonPosition)
+        
+        let newsAtIndexPath = newsFromTable[(indexPath?.row)!]
+        selectedNews = newsAtIndexPath
+        
+        switch selectedNews!.type! {
+        case .isNoticiaInfo:
+            self.performSegue(withIdentifier: "newsDetail", sender: nil)
+        case .isInfograf:
+            self.performSegue(withIdentifier: "showWebView", sender: selectedNews?.link)
+            break
+        case .isVideoNew:
+            self.performSegue(withIdentifier: "showWebView", sender: selectedNews?.link)
+            break
+        case .noType:
+            break
+        }
+        
     }
     
     func loadImageBanner() {

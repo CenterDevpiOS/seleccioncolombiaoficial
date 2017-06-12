@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class SCIntroViewController: AVPlayerViewController {
+class SCIntroViewController: AVPlayerViewController, CAAnimationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,26 @@ class SCIntroViewController: AVPlayerViewController {
     
     func playerDidFinishPlaying(note: NSNotification) {
         print("Video Finished")
-        dismiss(animated: true, completion: nil)
+        enterApp()
+    }
+    
+    func enterApp() -> Void {
+        
+        let animation = CATransition()
+        animation.delegate = self
+        animation.type = kCATransitionFade
+        animation.duration = 0.5
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        
+        let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeVC")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.layer.add(animation, forKey: "transitionViewAnimation")
+        
+        appDelegate.window?.rootViewController = homeVC
+        
+        appDelegate.window?.makeKeyAndVisible()
     }
     
 
