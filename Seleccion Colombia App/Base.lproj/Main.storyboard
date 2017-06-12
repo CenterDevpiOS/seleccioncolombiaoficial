@@ -514,7 +514,7 @@
             <objects>
                 <navigationController storyboardIdentifier="homeVC" automaticallyAdjustsScrollViewInsets="NO" id="FGK-fb-HBi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hlr-ZQ-Hhj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hlr-ZQ-Hhj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
