@@ -25,7 +25,6 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
-  - KCFloatingActionButton (2.2.0)
   - Protobuf (3.3.0)
   - SideMenu (2.3.2)
 
@@ -33,7 +32,6 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Firebase/Core
   - Firebase/Messaging
-  - KCFloatingActionButton (~> 2.2.0)
   - SideMenu
 
 SPEC CHECKSUMS:
@@ -44,10 +42,9 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   FirebaseMessaging: 227406c05b0dc9290702d2e9f18ab5528f0c2cf2
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  KCFloatingActionButton: 8c71fa25774e422c8d407f82b4b27809d0cd5233
   Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
   SideMenu: 3fa07dd05d4bade2b6f9889fb1877e312e1ba319
 
-PODFILE CHECKSUM: 976da7a671e0fb254417807db05be2954e467a72
+PODFILE CHECKSUM: b342b22ea6efbe78c48886f2e706c5cb680df68d
 
 COCOAPODS: 1.2.1

@@ -133,6 +133,12 @@ class NewsViewController: UIViewController{
                     
                     self.bannerImageView.isHidden = false
                     self.bannerImageView.image = image
+                    
+                    UIView.animate(withDuration: 0.6, animations: { 
+                        self.backToTopButton.frame = CGRect(x: self.view.bounds.width - 62, y: self.view.bounds.height - 141 - 56, width: 56, height: 56)
+                    })
+                    
+                    
                 }
                 
             
