@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Agency_FB.ttf">
-            <string>AgencyFB-Reg</string>
+        <array key="AGENCYB.TTF">
+            <string>AgencyFB-Bold</string>
         </array>
         <array key="Helvetica-Condensed-Bold_0.otf">
             <string>Helvetica-Condensed-Bold</string>
@@ -116,6 +116,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="319.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colombia_news_watermark" translatesAutoresizingMaskIntoConstraints="NO" id="rlB-sq-VMV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="188" id="eCB-Ss-s7Z"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CeZ-bM-1QI">
                                                     <rect key="frame" x="-2" y="-2" width="379" height="190"/>
                                                     <constraints>
@@ -154,10 +160,13 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
+                                                <constraint firstItem="rlB-sq-VMV" firstAttribute="leading" secondItem="4uK-xI-NEQ" secondAttribute="leading" id="0GQ-zD-bQI"/>
                                                 <constraint firstItem="CeZ-bM-1QI" firstAttribute="leading" secondItem="4uK-xI-NEQ" secondAttribute="leadingMargin" constant="-10" id="2Fg-0a-xcN"/>
                                                 <constraint firstItem="gPs-iZ-NEs" firstAttribute="top" secondItem="qgf-MP-N5d" secondAttribute="bottom" constant="8" id="5e2-sU-SOF"/>
+                                                <constraint firstItem="rlB-sq-VMV" firstAttribute="top" secondItem="4uK-xI-NEQ" secondAttribute="top" id="9cb-Kc-Njx"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gPs-iZ-NEs" secondAttribute="trailing" id="GIi-We-z4t"/>
                                                 <constraint firstItem="UbA-2Z-lIG" firstAttribute="trailing" secondItem="gPs-iZ-NEs" secondAttribute="trailing" constant="10" id="IVP-DX-CW3"/>
+                                                <constraint firstAttribute="trailing" secondItem="rlB-sq-VMV" secondAttribute="trailing" id="Iu6-Qz-48t"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="UbA-2Z-lIG" secondAttribute="bottom" constant="6" id="JQ2-fB-l6J"/>
                                                 <constraint firstItem="UbA-2Z-lIG" firstAttribute="top" secondItem="gPs-iZ-NEs" secondAttribute="bottom" constant="8" id="LZl-jT-A9c"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="CeZ-bM-1QI" secondAttribute="trailing" constant="-10" id="NAh-fq-jfo"/>
@@ -219,10 +228,19 @@
                                     <constraint firstAttribute="height" constant="46" id="2LT-KD-bDc"/>
                                     <constraint firstAttribute="width" constant="45" id="ahH-mN-G1g"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AgencyFB-Reg" family="Agency FB" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AgencyFB-Bold" family="Agency FB" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLc-js-QMt">
+                                <rect key="frame" x="313" y="547" width="56" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="6FC-9Z-kz0"/>
+                                    <constraint firstAttribute="width" constant="56" id="GJT-I4-940"/>
+                                </constraints>
+                                <state key="normal" image="back_to_top_arrow"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35402768850326538" green="0.35847324132919312" blue="0.36240571737289429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -230,6 +248,7 @@
                             <constraint firstItem="gBQ-PS-ap1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="46r-0I-l9d"/>
                             <constraint firstItem="ZbE-wl-2YD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Db-IM-R1w"/>
                             <constraint firstItem="gBQ-PS-ap1" firstAttribute="top" secondItem="Knt-I2-FZL" secondAttribute="bottom" constant="5" id="Avx-ml-kA1"/>
+                            <constraint firstAttribute="trailing" secondItem="xLc-js-QMt" secondAttribute="trailing" constant="6" id="FEJ-34-tye"/>
                             <constraint firstItem="2qZ-Gx-HtY" firstAttribute="top" secondItem="ZbE-wl-2YD" secondAttribute="bottom" constant="-20" id="GgI-yH-b6W"/>
                             <constraint firstItem="gBQ-PS-ap1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="ILq-IF-KcE"/>
                             <constraint firstItem="gBQ-PS-ap1" firstAttribute="top" secondItem="hT9-uR-9bZ" secondAttribute="bottom" constant="5" id="Qdo-TN-XT9"/>
@@ -245,6 +264,7 @@
                             <constraint firstItem="Xks-bM-oZd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="13" id="faC-BD-oEw"/>
                             <constraint firstAttribute="trailing" secondItem="ZbE-wl-2YD" secondAttribute="trailing" id="gHS-AS-Ffp"/>
                             <constraint firstItem="ZbE-wl-2YD" firstAttribute="top" secondItem="gBQ-PS-ap1" secondAttribute="bottom" id="gOW-jn-XtE"/>
+                            <constraint firstItem="cvm-EH-dpb" firstAttribute="top" secondItem="xLc-js-QMt" secondAttribute="bottom" constant="-72" id="ggn-67-mfx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gBQ-PS-ap1" secondAttribute="trailing" constant="-20" id="ghS-zb-ItA"/>
                             <constraint firstItem="3Hd-Xj-3uA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gjc-ek-0i9"/>
                             <constraint firstAttribute="trailing" secondItem="hT9-uR-9bZ" secondAttribute="trailing" constant="6" id="hsf-2S-F0v"/>
@@ -255,6 +275,7 @@
                     <navigationItem key="navigationItem" id="qz4-Z1-dgA"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="backToTopButton" destination="xLc-js-QMt" id="Yxf-uV-0jM"/>
                         <outlet property="bannerImageView" destination="cvm-EH-dpb" id="foU-HG-XJw"/>
                         <outlet property="tableNews" destination="ZbE-wl-2YD" id="J8l-Gi-hzs"/>
                         <segue destination="Rmd-5h-CnC" kind="show" identifier="newsDetail" id="rQ8-EW-5Bv"/>
@@ -435,7 +456,7 @@
                                     <constraint firstAttribute="width" constant="45" id="2nC-yN-hXS"/>
                                     <constraint firstAttribute="height" constant="46" id="uwM-OM-pLX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AgencyFB-Reg" family="Agency FB" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AgencyFB-Bold" family="Agency FB" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -532,7 +553,9 @@
         <image name="180X180" width="180" height="180"/>
         <image name="Menu App Selecccion Colombia 2-01.png" width="608" height="1080"/>
         <image name="_back_light" width="20" height="20"/>
+        <image name="back_to_top_arrow" width="56" height="56"/>
         <image name="barra inferior" width="584" height="92"/>
+        <image name="colombia_news_watermark" width="128" height="128"/>
         <image name="logo movistar-1" width="96" height="51"/>
     </resources>
     <inferredMetricsTieBreakers>

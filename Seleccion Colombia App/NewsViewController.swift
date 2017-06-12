@@ -15,6 +15,7 @@ class NewsViewController: UIViewController{
 
     @IBOutlet weak var bannerImageView: UIImageView!
     @IBOutlet weak var tableNews: UITableView!
+    @IBOutlet weak var backToTopButton: UIButton!
     
     var refreshControl: UIRefreshControl!
     
@@ -36,6 +37,9 @@ class NewsViewController: UIViewController{
         
         setRefreshControl()
         askForNews()
+        
+        setBackToTopButton()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -95,6 +99,18 @@ class NewsViewController: UIViewController{
             break
         }
         
+    }
+    
+    func setBackToTopButton () {
+        
+        self.backToTopButton.layer.cornerRadius = backToTopButton.bounds.width / 2
+        self.backToTopButton.clipsToBounds = true
+        backToTopButton.addTarget(self, action: #selector(backToTopAction), for: .touchUpInside)
+    }
+    
+    func backToTopAction()  {
+        self.tableNews.scrollsToTop = true
+        tableNews.setContentOffset(CGPoint.zero, animated: true)
     }
     
     func setRefreshControl () {
@@ -205,8 +221,10 @@ extension NewsViewController : UITableViewDataSource {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         newsCell.dataLabel.text = dateFormatter.string(from: newsAtIndexPath.date)
-        newsCell.newsImage.image = newsAtIndexPath.image
         newsCell.titleLable.text = newsAtIndexPath.tittle
+        newsCell.newsImage.image = newsAtIndexPath.image
+        newsCell.newsImage.contentMode = .scaleAspectFill
+       
         
         DispatchQueue.global().async {
         
@@ -217,7 +235,6 @@ extension NewsViewController : UITableViewDataSource {
                         return
                     }
                     DispatchQueue.main.async {
-                        
                         
                         self.newsFromTable[indexPath.row].image = UIImage(data: dataImage)
                         

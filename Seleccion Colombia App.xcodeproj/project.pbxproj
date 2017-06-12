@@ -40,6 +40,7 @@
 		DA5F460C1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460B1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 */; };
 		DA5F460E1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460D1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg */; };
 		DA5F46101EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460F1EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png */; };
+		DA5F46131EEF41B100F3412D /* AGENCYB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46121EEF41B100F3412D /* AGENCYB.TTF */; };
 		FBEBB1BB1EEDAC0A000125A0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BA1EEDAC0A000125A0 /* NewsTableViewCell.swift */; };
 		FBEBB1BD1EEDB07A000125A0 /* NetworkManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BC1EEDB07A000125A0 /* NetworkManagement.swift */; };
 		FBEBB1BF1EEDB12C000125A0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BE1EEDB12C000125A0 /* News.swift */; };
@@ -99,6 +100,7 @@
 		DA5F460B1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ANIMACIION INTRO LIMPIA.mp4"; sourceTree = "<group>"; };
 		DA5F460D1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2017-06-12-PHOTO-00000354.jpg"; sourceTree = "<group>"; };
 		DA5F460F1EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu App Selecccion Colombia 2-01.png"; sourceTree = "<group>"; };
+		DA5F46121EEF41B100F3412D /* AGENCYB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AGENCYB.TTF; sourceTree = "<group>"; };
 		E052547D9EF5B0030F54EB1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F02C2745533EA0491878AE95 /* Pods-Seleccion Colombia App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seleccion Colombia App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seleccion Colombia App/Pods-Seleccion Colombia App.release.xcconfig"; sourceTree = "<group>"; };
 		F6EA6E0DEB8C265A968448D0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -249,6 +251,7 @@
 			children = (
 				DA5F460D1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg */,
 				DA5F45F91EEE039800F3412D /* Agency_FB.ttf */,
+				DA5F46121EEF41B100F3412D /* AGENCYB.TTF */,
 				DA5F45FA1EEE039800F3412D /* Helvetica-Condensed_2.otf */,
 				DA5F45FB1EEE039800F3412D /* Helvetica-Condensed-Bold_0.otf */,
 				DA5F45FC1EEE039800F3412D /* OpenSans-Italic.ttf */,
@@ -415,6 +418,7 @@
 				DA5F45C21EECD82C00F3412D /* Main.storyboard in Resources */,
 				DA5F46001EEE03B200F3412D /* Helvetica-Condensed-Bold_0.otf in Resources */,
 				DA5F460C1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 in Resources */,
+				DA5F46131EEF41B100F3412D /* AGENCYB.TTF in Resources */,
 				DA5F46021EEE03B700F3412D /* OpenSans-Regular_0.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
