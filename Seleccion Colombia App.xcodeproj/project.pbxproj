@@ -27,7 +27,6 @@
 		DA5F45E61EED880400F3412D /* SCMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45E51EED880400F3412D /* SCMenuViewController.swift */; };
 		DA5F45E91EED8EAF00F3412D /* SCSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45E81EED8EAF00F3412D /* SCSideMenuNavigationController.swift */; };
 		DA5F45EC1EED9A2A00F3412D /* SCIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45EB1EED9A2A00F3412D /* SCIntroViewController.swift */; };
-		DA5F45EF1EED9EC800F3412D /* ANIMACION INICIAL.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45EE1EED9E4700F3412D /* ANIMACION INICIAL.mp4 */; };
 		DA5F45F11EEDCBDC00F3412D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45F01EEDCBDC00F3412D /* GoogleService-Info.plist */; };
 		DA5F45FE1EEE03AD00F3412D /* Agency_FB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45F91EEE039800F3412D /* Agency_FB.ttf */; };
 		DA5F45FF1EEE03B000F3412D /* Helvetica-Condensed_2.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45FA1EEE039800F3412D /* Helvetica-Condensed_2.otf */; };
@@ -38,6 +37,8 @@
 		DA5F46061EEF0CAF00F3412D /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F46051EEF0CAF00F3412D /* AppUtility.swift */; };
 		DA5F46081EEF142F00F3412D /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46071EEF13F200F3412D /* OpenSans-Bold.ttf */; };
 		DA5F460A1EEF147100F3412D /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46091EEF147100F3412D /* OpenSans-Semibold.ttf */; };
+		DA5F460C1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460B1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 */; };
+		DA5F460E1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460D1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg */; };
 		FBEBB1BB1EEDAC0A000125A0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BA1EEDAC0A000125A0 /* NewsTableViewCell.swift */; };
 		FBEBB1BD1EEDB07A000125A0 /* NetworkManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BC1EEDB07A000125A0 /* NetworkManagement.swift */; };
 		FBEBB1BF1EEDB12C000125A0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BE1EEDB12C000125A0 /* News.swift */; };
@@ -83,7 +84,6 @@
 		DA5F45E51EED880400F3412D /* SCMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMenuViewController.swift; sourceTree = "<group>"; };
 		DA5F45E81EED8EAF00F3412D /* SCSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		DA5F45EB1EED9A2A00F3412D /* SCIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCIntroViewController.swift; sourceTree = "<group>"; };
-		DA5F45EE1EED9E4700F3412D /* ANIMACION INICIAL.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ANIMACION INICIAL.mp4"; sourceTree = "<group>"; };
 		DA5F45F01EEDCBDC00F3412D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA5F45F21EEDCDA200F3412D /* Seleccion Colombia App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Seleccion Colombia App.entitlements"; sourceTree = "<group>"; };
 		DA5F45F91EEE039800F3412D /* Agency_FB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Agency_FB.ttf; sourceTree = "<group>"; };
@@ -95,6 +95,8 @@
 		DA5F46051EEF0CAF00F3412D /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		DA5F46071EEF13F200F3412D /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		DA5F46091EEF147100F3412D /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		DA5F460B1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ANIMACIION INTRO LIMPIA.mp4"; sourceTree = "<group>"; };
+		DA5F460D1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2017-06-12-PHOTO-00000354.jpg"; sourceTree = "<group>"; };
 		E052547D9EF5B0030F54EB1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F02C2745533EA0491878AE95 /* Pods-Seleccion Colombia App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seleccion Colombia App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seleccion Colombia App/Pods-Seleccion Colombia App.release.xcconfig"; sourceTree = "<group>"; };
 		F6EA6E0DEB8C265A968448D0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -243,6 +245,7 @@
 		DA5F45ED1EED9E3300F3412D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DA5F460D1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg */,
 				DA5F45F91EEE039800F3412D /* Agency_FB.ttf */,
 				DA5F45FA1EEE039800F3412D /* Helvetica-Condensed_2.otf */,
 				DA5F45FB1EEE039800F3412D /* Helvetica-Condensed-Bold_0.otf */,
@@ -250,7 +253,7 @@
 				DA5F46071EEF13F200F3412D /* OpenSans-Bold.ttf */,
 				DA5F46091EEF147100F3412D /* OpenSans-Semibold.ttf */,
 				DA5F45FD1EEE039800F3412D /* OpenSans-Regular_0.ttf */,
-				DA5F45EE1EED9E4700F3412D /* ANIMACION INICIAL.mp4 */,
+				DA5F460B1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 */,
 				DA5F46051EEF0CAF00F3412D /* AppUtility.swift */,
 			);
 			name = Resources;
@@ -399,7 +402,7 @@
 				DA5F460A1EEF147100F3412D /* OpenSans-Semibold.ttf in Resources */,
 				DA5F46081EEF142F00F3412D /* OpenSans-Bold.ttf in Resources */,
 				DA5F46011EEE03B500F3412D /* OpenSans-Italic.ttf in Resources */,
-				DA5F45EF1EED9EC800F3412D /* ANIMACION INICIAL.mp4 in Resources */,
+				DA5F460E1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg in Resources */,
 				DA5F45C71EECD82C00F3412D /* LaunchScreen.storyboard in Resources */,
 				DA5F45F11EEDCBDC00F3412D /* GoogleService-Info.plist in Resources */,
 				DA5F45FE1EEE03AD00F3412D /* Agency_FB.ttf in Resources */,
@@ -407,6 +410,7 @@
 				DA5F45FF1EEE03B000F3412D /* Helvetica-Condensed_2.otf in Resources */,
 				DA5F45C21EECD82C00F3412D /* Main.storyboard in Resources */,
 				DA5F46001EEE03B200F3412D /* Helvetica-Condensed-Bold_0.otf in Resources */,
+				DA5F460C1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 in Resources */,
 				DA5F46021EEE03B700F3412D /* OpenSans-Regular_0.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

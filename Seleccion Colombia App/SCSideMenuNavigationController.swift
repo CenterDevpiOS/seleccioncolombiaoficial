@@ -19,8 +19,7 @@ class SCSideMenuNavigationController: UISideMenuNavigationController {
         SideMenuManager.menuWidth = max(round(min((self.view.frame.width), (self.view.frame.height)) * 1), 240)
         
         SideMenuManager.menuFadeStatusBar = true
-        
-       
+    
         
     }
     

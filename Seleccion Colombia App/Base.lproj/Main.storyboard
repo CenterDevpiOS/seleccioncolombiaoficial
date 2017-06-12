@@ -42,13 +42,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side menu image" translatesAutoresizingMaskIntoConstraints="NO" id="2sq-gv-gCY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2017-06-12-PHOTO-00000354.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2sq-gv-gCY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65m-4i-hZE">
-                                <rect key="frame" x="0.0" y="207" width="376" height="110"/>
+                                <rect key="frame" x="0.0" y="199" width="376" height="146"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="i0s-sK-yqZ"/>
+                                    <constraint firstAttribute="height" constant="146" id="i0s-sK-yqZ"/>
                                 </constraints>
                                 <connections>
                                     <action selector="closeMenuWithButton:" destination="SkF-7u-67H" eventType="touchUpInside" id="CQm-oC-Kte"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="2sq-gv-gCY" firstAttribute="top" secondItem="4qa-AZ-qUr" secondAttribute="top" id="fAd-Kk-g5N"/>
                             <constraint firstItem="8H8-6k-1Is" firstAttribute="top" secondItem="2sq-gv-gCY" secondAttribute="bottom" id="mSk-QF-KGp"/>
                             <constraint firstItem="65m-4i-hZE" firstAttribute="centerX" secondItem="4qa-AZ-qUr" secondAttribute="centerX" id="uib-pf-8S3"/>
-                            <constraint firstItem="65m-4i-hZE" firstAttribute="top" secondItem="Vln-NG-RCN" secondAttribute="bottom" constant="143" id="zGc-TO-vYa"/>
+                            <constraint firstItem="65m-4i-hZE" firstAttribute="top" secondItem="Vln-NG-RCN" secondAttribute="bottom" constant="135" id="zGc-TO-vYa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HO9-6d-pOc"/>
@@ -507,9 +507,9 @@
     </scenes>
     <resources>
         <image name="180X180" width="180" height="180"/>
+        <image name="2017-06-12-PHOTO-00000354.jpg" width="540" height="960"/>
         <image name="barra inferior" width="584" height="92"/>
         <image name="logo movistar-1" width="96" height="51"/>
-        <image name="side menu image" width="607" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DkX-lU-qng"/>
