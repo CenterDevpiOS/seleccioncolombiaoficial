@@ -204,8 +204,9 @@ extension NewsViewController : UITableViewDelegate {
         return UITableViewAutomaticDimension
     }
     
+    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 320
+        return 229
     }
 }
 

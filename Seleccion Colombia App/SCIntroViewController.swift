@@ -19,8 +19,8 @@ class SCIntroViewController: AVPlayerViewController, CAAnimationDelegate {
         
         self.showsPlaybackControls = false
         
-        guard let path = Bundle.main.path(forResource: "ANIMACIION INTRO LIMPIA", ofType:"mp4") else {
-            debugPrint("ANIMACIION INTRO LIMPIA.mp4 not found")
+        guard let path = Bundle.main.path(forResource: "Intro v3-1", ofType:"mp4") else {
+            debugPrint("Intro v3-1.mp4 not found")
             return
         }
         //let url = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")

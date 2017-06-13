@@ -18,6 +18,7 @@
 		A1C12627B5BEA4BDF81AA8B3 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DE4894435DE0020965181B /* BuddyBuildSDK.framework */; };
 		B07A65E002CD6F93E9E4B5D6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467A38618F969C409CAE9F46 /* CoreVideo.framework */; };
 		D39588FF068AEB41D315E698 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C4BD1B6BC7DE4CA2CEB9A0 /* SystemConfiguration.framework */; };
+		DA186CBF1EF040C9002C5E19 /* Intro v3-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA186CBE1EF040C9002C5E19 /* Intro v3-1.mp4 */; };
 		DA5F45BD1EECD82C00F3412D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45BC1EECD82C00F3412D /* AppDelegate.swift */; };
 		DA5F45BF1EECD82C00F3412D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45BE1EECD82C00F3412D /* NewsViewController.swift */; };
 		DA5F45C21EECD82C00F3412D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45C01EECD82C00F3412D /* Main.storyboard */; };
@@ -37,7 +38,6 @@
 		DA5F46061EEF0CAF00F3412D /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F46051EEF0CAF00F3412D /* AppUtility.swift */; };
 		DA5F46081EEF142F00F3412D /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46071EEF13F200F3412D /* OpenSans-Bold.ttf */; };
 		DA5F460A1EEF147100F3412D /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46091EEF147100F3412D /* OpenSans-Semibold.ttf */; };
-		DA5F460C1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460B1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 */; };
 		DA5F460E1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460D1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg */; };
 		DA5F46101EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460F1EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png */; };
 		DA5F46131EEF41B100F3412D /* AGENCYB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46121EEF41B100F3412D /* AGENCYB.TTF */; };
@@ -74,6 +74,7 @@
 		B6029455E66C389D84C3C30C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B7323B400FC80AC7B5AF37BC /* Pods_Seleccion_Colombia_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seleccion_Colombia_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D364241E897C98AF53923A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		DA186CBE1EF040C9002C5E19 /* Intro v3-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Intro v3-1.mp4"; sourceTree = "<group>"; };
 		DA5F45B91EECD82C00F3412D /* Seleccion Colombia App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seleccion Colombia App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F45BC1EECD82C00F3412D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA5F45BE1EECD82C00F3412D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +99,6 @@
 		DA5F46051EEF0CAF00F3412D /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		DA5F46071EEF13F200F3412D /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		DA5F46091EEF147100F3412D /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
-		DA5F460B1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ANIMACIION INTRO LIMPIA.mp4"; sourceTree = "<group>"; };
 		DA5F460D1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2017-06-12-PHOTO-00000354.jpg"; sourceTree = "<group>"; };
 		DA5F460F1EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu App Selecccion Colombia 2-01.png"; sourceTree = "<group>"; };
 		DA5F46121EEF41B100F3412D /* AGENCYB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AGENCYB.TTF; sourceTree = "<group>"; };
@@ -261,8 +261,8 @@
 				DA5F46071EEF13F200F3412D /* OpenSans-Bold.ttf */,
 				DA5F46091EEF147100F3412D /* OpenSans-Semibold.ttf */,
 				DA5F45FD1EEE039800F3412D /* OpenSans-Regular_0.ttf */,
-				DA5F460B1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 */,
 				DA5F460F1EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png */,
+				DA186CBE1EF040C9002C5E19 /* Intro v3-1.mp4 */,
 				DA5F46051EEF0CAF00F3412D /* AppUtility.swift */,
 			);
 			name = Resources;
@@ -408,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA186CBF1EF040C9002C5E19 /* Intro v3-1.mp4 in Resources */,
 				DA5F460A1EEF147100F3412D /* OpenSans-Semibold.ttf in Resources */,
 				DA5F46171EEF66D800F3412D /* powered_by_movistar_new (1).png in Resources */,
 				DA5F46081EEF142F00F3412D /* OpenSans-Bold.ttf in Resources */,
@@ -421,7 +422,6 @@
 				DA5F45FF1EEE03B000F3412D /* Helvetica-Condensed_2.otf in Resources */,
 				DA5F45C21EECD82C00F3412D /* Main.storyboard in Resources */,
 				DA5F46001EEE03B200F3412D /* Helvetica-Condensed-Bold_0.otf in Resources */,
-				DA5F460C1EEF198700F3412D /* ANIMACIION INTRO LIMPIA.mp4 in Resources */,
 				DA5F46131EEF41B100F3412D /* AGENCYB.TTF in Resources */,
 				DA5F46021EEE03B700F3412D /* OpenSans-Regular_0.ttf in Resources */,
 			);
