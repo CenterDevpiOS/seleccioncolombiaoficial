@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R4V-uE-ZJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sSO-3e-Hsv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65m-4i-hZE">
-                                <rect key="frame" x="0.0" y="199" width="376" height="146"/>
+                                <rect key="frame" x="0.0" y="135" width="376" height="146"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="146" id="i0s-sK-yqZ"/>
                                 </constraints>
@@ -65,6 +65,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HO9-6d-pOc"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="menuImageView" destination="2sq-gv-gCY" id="LgQ-sf-aHo"/>
                     </connections>
@@ -503,6 +505,24 @@
                 <exit id="0ZS-FA-MTr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3624.8000000000002" y="126.38680659670166"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="Aad-RW-UrY">
+            <objects>
+                <viewController id="sSO-3e-Hsv" customClass="SCPlayerViewController" customModule="Seleccion_Colombia_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zuS-jD-Efh"/>
+                        <viewControllerLayoutGuide type="bottom" id="PGX-cm-zmT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lKr-42-n1M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQg-mW-s0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2026" y="-526"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="5RX-0r-ybu">

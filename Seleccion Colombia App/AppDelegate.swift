@@ -28,9 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             completionHandler: {_, _ in })
         
         application.registerForRemoteNotifications()
-        
-        UIApplication.shared.isStatusBarHidden = true
-        
+                
+        UIApplication.shared.statusBarStyle = .lightContent
         // Override point for customization after application launch.
         return true
     }

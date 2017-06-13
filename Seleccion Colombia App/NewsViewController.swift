@@ -151,6 +151,10 @@ class NewsViewController: UIViewController{
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) {
     
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
 }
 
 extension NewsViewController {

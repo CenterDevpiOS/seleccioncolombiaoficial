@@ -16,14 +16,14 @@ class SCMenuViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.isHidden = true
-        
-        
+
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        UIApplication.shared.isStatusBarHidden = true
         AppUtility.lockOrientation(.portrait)
     }
 
@@ -39,6 +39,11 @@ class SCMenuViewController: UIViewController {
     func closeMenu() {
         dismiss(animated: true, completion: nil)
         
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        
+        return true
     }
     
   

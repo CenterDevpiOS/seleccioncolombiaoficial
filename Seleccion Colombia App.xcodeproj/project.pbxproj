@@ -19,6 +19,7 @@
 		B07A65E002CD6F93E9E4B5D6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467A38618F969C409CAE9F46 /* CoreVideo.framework */; };
 		D39588FF068AEB41D315E698 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C4BD1B6BC7DE4CA2CEB9A0 /* SystemConfiguration.framework */; };
 		DA186CBF1EF040C9002C5E19 /* Intro v3-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA186CBE1EF040C9002C5E19 /* Intro v3-1.mp4 */; };
+		DA186CC11EF0A07D002C5E19 /* SCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA186CC01EF0A07D002C5E19 /* SCPlayerViewController.swift */; };
 		DA5F45BD1EECD82C00F3412D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45BC1EECD82C00F3412D /* AppDelegate.swift */; };
 		DA5F45BF1EECD82C00F3412D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45BE1EECD82C00F3412D /* NewsViewController.swift */; };
 		DA5F45C21EECD82C00F3412D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45C01EECD82C00F3412D /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		B7323B400FC80AC7B5AF37BC /* Pods_Seleccion_Colombia_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seleccion_Colombia_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D364241E897C98AF53923A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		DA186CBE1EF040C9002C5E19 /* Intro v3-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Intro v3-1.mp4"; sourceTree = "<group>"; };
+		DA186CC01EF0A07D002C5E19 /* SCPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPlayerViewController.swift; sourceTree = "<group>"; };
 		DA5F45B91EECD82C00F3412D /* Seleccion Colombia App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seleccion Colombia App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F45BC1EECD82C00F3412D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA5F45BE1EECD82C00F3412D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5F45EB1EED9A2A00F3412D /* SCIntroViewController.swift */,
+				DA186CC01EF0A07D002C5E19 /* SCPlayerViewController.swift */,
 			);
 			name = Intro;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				DA5F45EC1EED9A2A00F3412D /* SCIntroViewController.swift in Sources */,
 				DA5F45BF1EECD82C00F3412D /* NewsViewController.swift in Sources */,
 				FBEBB1C11EEDB4E2000125A0 /* ConstantsNews.swift in Sources */,
+				DA186CC11EF0A07D002C5E19 /* SCPlayerViewController.swift in Sources */,
 				FBEBB1BF1EEDB12C000125A0 /* News.swift in Sources */,
 				FBEBB1BB1EEDAC0A000125A0 /* NewsTableViewCell.swift in Sources */,
 				FBEBB1C71EEDE0A3000125A0 /* DetailNewsViewController.swift in Sources */,

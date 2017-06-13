@@ -19,6 +19,8 @@ class SCSideMenuNavigationController: UISideMenuNavigationController {
         SideMenuManager.menuWidth = max(round(min((self.view.frame.width), (self.view.frame.height)) * 1), 240)
         
         SideMenuManager.menuFadeStatusBar = true
+        
+        UIApplication.shared.isStatusBarHidden = true
     
         
     }
@@ -28,10 +30,21 @@ class SCSideMenuNavigationController: UISideMenuNavigationController {
         
          AppUtility.lockOrientation(.portrait)
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+         UIApplication.shared.isStatusBarHidden = false
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        
+        return true
     }
     
     /*
