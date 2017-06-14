@@ -48,12 +48,6 @@ class NewsViewController: UIViewController{
         
         AppUtility.lockOrientation(.portrait)
         
-        
-//        DispatchQueue.once(token: "com.vectorform.test") {
-//            
-//            let introVC = self.storyboard?.instantiateViewController(withIdentifier: "SCIntroViewController") as! SCIntroViewController
-//            self.present(introVC, animated: true, completion: nil)
-//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -272,7 +266,7 @@ public extension DispatchQueue {
      - parameter token: A unique reverse DNS style name such as com.vectorform.<name> or a GUID
      - parameter block: Block to execute once
      */
-    public class func once(token: String, block:@noescape(Void)->Void) {
+    public class func once(token: String, block:(Void)->Void) {
         objc_sync_enter(self); defer { objc_sync_exit(self) }
         
         if _onceTracker.contains(token) {
