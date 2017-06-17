@@ -20,6 +20,8 @@ class WebViewController: UIViewController {
         AppUtility.lockOrientation(.all)
         // Do any additional setup after loading the view.
         
+         NotificationCenter.default.addObserver(self, selector: #selector(videoDidRotate), name: .UIDeviceOrientationDidChange, object: nil)
+        
         let url = URL(string: self.url)
         
         let request = URLRequest(url: url!)
@@ -38,6 +40,12 @@ class WebViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         
         return false
+    }
+    
+    func videoDidRotate() {
+        
+        UIApplication.shared.isStatusBarHidden = false
+        self.setNeedsStatusBarAppearanceUpdate()
     }
 
 }
