@@ -116,13 +116,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colombia_news_watermark" translatesAutoresizingMaskIntoConstraints="NO" id="rlB-sq-VMV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="667" height="178"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="178" id="7xs-k6-ZPi"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CeZ-bM-1QI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="667" height="178"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="178" id="NVa-Ka-bjh"/>
                                                     </constraints>
@@ -138,13 +138,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entérate cómo le fue a " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPs-iZ-NEs">
-                                                    <rect key="frame" x="8" y="200" width="263" height="22"/>
+                                                    <rect key="frame" x="8" y="200" width="555" height="22"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Condensed" family="Helvetica" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbA-2Z-lIG">
-                                                    <rect key="frame" x="279" y="196" width="96" height="25"/>
+                                                    <rect key="frame" x="571" y="196" width="96" height="25"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="96" id="bpS-I9-GSY"/>
@@ -288,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2852" y="129.98500749625188"/>
+            <point key="canvasLocation" x="1886" y="130"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="Lfk-st-ymg">
@@ -303,7 +303,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleAspectFit" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OIQ-bZ-BPT">
-                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="543"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHB-IF-Q6c">
@@ -318,17 +318,38 @@
                                 </items>
                                 <color key="barTintColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barra inferior" translatesAutoresizingMaskIntoConstraints="NO" id="F8D-F0-DRk">
+                                <rect key="frame" x="-20" y="595" width="415" height="92"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="F8D-F0-DRk" firstAttribute="leading" secondItem="CDa-gR-aoV" secondAttribute="leading" constant="-20" id="0ZT-yf-7LM"/>
                             <constraint firstItem="sHB-IF-Q6c" firstAttribute="width" secondItem="CDa-gR-aoV" secondAttribute="width" id="6lV-7b-82N"/>
+                            <constraint firstAttribute="trailing" secondItem="F8D-F0-DRk" secondAttribute="trailing" constant="-20" id="Rbk-RZ-ag4"/>
+                            <constraint firstItem="F8D-F0-DRk" firstAttribute="top" secondItem="OIQ-bZ-BPT" secondAttribute="bottom" constant="-20" id="YbT-mt-C3G"/>
+                            <constraint firstAttribute="bottom" secondItem="F8D-F0-DRk" secondAttribute="bottom" constant="-20" id="bpU-R9-a45"/>
                             <constraint firstAttribute="trailing" secondItem="OIQ-bZ-BPT" secondAttribute="trailing" id="ckc-Lu-Qu7"/>
                             <constraint firstItem="sHB-IF-Q6c" firstAttribute="top" secondItem="d03-cm-xuG" secondAttribute="bottom" constant="8" id="fPQ-h1-5zl"/>
+                            <constraint firstItem="ENf-bm-apx" firstAttribute="top" secondItem="OIQ-bZ-BPT" secondAttribute="bottom" id="ifT-h1-LAR"/>
                             <constraint firstItem="OIQ-bZ-BPT" firstAttribute="leading" secondItem="CDa-gR-aoV" secondAttribute="leading" id="oYW-de-s7H"/>
-                            <constraint firstItem="ENf-bm-apx" firstAttribute="top" secondItem="OIQ-bZ-BPT" secondAttribute="bottom" id="pbY-br-dxy"/>
                             <constraint firstItem="sHB-IF-Q6c" firstAttribute="centerX" secondItem="CDa-gR-aoV" secondAttribute="centerX" id="qXI-uj-NoJ"/>
                             <constraint firstItem="OIQ-bZ-BPT" firstAttribute="top" secondItem="sHB-IF-Q6c" secondAttribute="bottom" id="rqI-5K-ZqC"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ifT-h1-LAR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="F8D-F0-DRk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="YbT-mt-C3G"/>
+                                <include reference="ifT-h1-LAR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="webView" destination="OIQ-bZ-BPT" id="nEe-AS-74A"/>
@@ -337,7 +358,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ea-Mf-gzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KVa-4R-dJF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2852" y="-505"/>
+            <point key="canvasLocation" x="1885.0074962518743" y="-548"/>
         </scene>
         <!--Detail News View Controller-->
         <scene sceneID="LB9-10-tus">
@@ -504,7 +525,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yom-Zc-YmI" sceneMemberID="firstResponder"/>
                 <exit id="0ZS-FA-MTr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3624.8000000000002" y="126.38680659670166"/>
+            <point key="canvasLocation" x="2658" y="126"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="Aad-RW-UrY">
@@ -569,7 +590,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awe-CG-Hsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912.8" y="129.98500749625188"/>
+            <point key="canvasLocation" x="946" y="130"/>
         </scene>
     </scenes>
     <resources>
