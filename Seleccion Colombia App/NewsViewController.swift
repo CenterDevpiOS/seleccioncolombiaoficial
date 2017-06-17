@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import AVKit
 import Alamofire
+import MBProgressHUD
 
 class NewsViewController: UIViewController{
 
@@ -18,14 +19,14 @@ class NewsViewController: UIViewController{
     @IBOutlet weak var backToTopButton: UIButton!
     
     var refreshControl: UIRefreshControl!
+    var gettingNews = false
     
     var selectedNews : News?
     
-    var newsFromTable = [News](){
-    
-        didSet{
-                    }
-        
+    var newsFromTable: [News] = [] {
+        didSet {
+            self.tableNews.reloadData()
+        }
     }
     
     override func viewDidLoad() {
@@ -36,7 +37,7 @@ class NewsViewController: UIViewController{
         navigationController?.navigationBar.isHidden = true
         
         setRefreshControl()
-        askForNews()
+        askForNews(pageCount: UserDefaults.standard.integer(forKey: "pageCount"))
         
         setBackToTopButton()
         
@@ -111,8 +112,16 @@ class NewsViewController: UIViewController{
         
         refreshControl = UIRefreshControl()
         refreshControl.tintColor = .black
-        refreshControl.addTarget(self, action: #selector(askForNews), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action: #selector(refreshAction), for: UIControlEvents.valueChanged)
         tableNews.addSubview(refreshControl)
+    }
+    
+    func refreshAction () {
+        
+        self.newsFromTable.removeAll()
+        UserDefaults.standard.set(1, forKey: "pageCount")
+        let pageCount = UserDefaults.standard.integer(forKey: "pageCount")
+        askForNews(pageCount: pageCount)
     }
     
     func loadImageBanner() {
@@ -154,9 +163,10 @@ class NewsViewController: UIViewController{
 extension NewsViewController {
 
     
-    func askForNews(){
+    func askForNews(pageCount: Int){
     
-        NetworkManagement.requestNews(with: 1, completionHandler: {(newsFromNetwork, error) in
+        NetworkManagement.requestNews(with: pageCount, completionHandler: {(newsFromNetwork, error) in
+            
             guard error == nil else {
                 print("-----ERROR en Endpoint -----")
                 print(error.debugDescription)
@@ -166,10 +176,14 @@ extension NewsViewController {
                 return
             }
             
-            self.newsFromTable.removeAll()
-            self.newsFromTable = news
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+            self.gettingNews = false
+            UserDefaults.standard.set(pageCount, forKey: "pageCount")
+            
+            self.newsFromTable += news
+            print(self.newsFromTable.count)
             self.refreshControl.endRefreshing()
-            self.tableNews.reloadData()
 
         })
         
@@ -247,6 +261,25 @@ extension NewsViewController : UITableViewDataSource {
                     }
                 }
             }
+        }
+        
+        if indexPath.row == self.newsFromTable.count - 1 {
+            
+            if !gettingNews {
+                
+                self.gettingNews = true
+                
+                let loading = MBProgressHUD.showAdded(to: self.view, animated: true)
+                
+                loading.label.text = "Cargando..."
+                loading.mode = .indeterminate
+                
+                let pageCount = UserDefaults.standard.integer(forKey: "pageCount") + 1
+                
+                self.askForNews(pageCount: pageCount)
+                
+            }
+            
         }
         
         return newsCell

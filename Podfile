@@ -11,6 +11,7 @@ target 'Seleccion Colombia App' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'SideMenu'
+  pod 'MBProgressHUD', '~> 1.0.0'
 
   target 'Seleccion Colombia AppTests' do
     inherit! :search_paths

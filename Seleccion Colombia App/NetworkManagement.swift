@@ -19,8 +19,7 @@ struct NetworkManagement {
         let network = NetworkManagement()
         Alamofire.request(Router.searchNews(page: page)).response { (response) in
          
-            print("result from request")
-            
+  
             guard response.error == nil else {
                 return completionHandler(nil, response.error!)
             }
@@ -69,6 +68,8 @@ enum Router: URLRequestConvertible {
         
         let url = try Router.baseURLString.asURL()
         let urlRequest = URLRequest(url: url.appendingPathComponent(result.path))
+        
+        print("this is the url : \(result.parameters)")
         
         return try URLEncoding.default.encode(urlRequest, with: result.parameters)
     }

@@ -28,7 +28,7 @@ struct ConstantsNews {
     }
     
     struct UrlKeys {
-        static let page = "page"
+        static let page = "pag"
     }
     
     // MARK: JSON Body Keys

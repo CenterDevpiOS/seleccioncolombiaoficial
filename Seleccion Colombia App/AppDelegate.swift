@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         BuddyBuildSDK.setup()
         FirebaseApp.configure()
         
+        UserDefaults.standard.set(1, forKey: "pageCount")
+        
         UNUserNotificationCenter.current().delegate = self
         
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
