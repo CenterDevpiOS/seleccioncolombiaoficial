@@ -11,12 +11,26 @@ import UIKit
 class SCMenuViewController: UIViewController {
 
     @IBOutlet weak var menuImageView: UIImageView!
+    
+    @IBOutlet weak var newsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.isHidden = true
 
+        if DeviceType.IS_IPHONE_6P {
+            
+            newsButton.frame = CGRect(x: 0, y: 260, width: 415, height: 62)
+            
+        } else if DeviceType.IS_IPHONE_6 {
+            
+            print("this is happening")
+            newsButton.frame = CGRect(x: 0, y: 233, width: 375, height: 60)
+        } else if DeviceType.IS_IPHONE_5 {
+            newsButton.frame = CGRect(x: 0, y: 200, width: 320, height: 48)
+        }
         
     }
     

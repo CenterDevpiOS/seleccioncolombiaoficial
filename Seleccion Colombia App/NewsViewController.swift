@@ -12,6 +12,8 @@ import AVKit
 import Alamofire
 import MBProgressHUD
 
+
+
 class NewsViewController: UIViewController{
 
     @IBOutlet weak var bannerImageView: UIImageView!
@@ -21,11 +23,12 @@ class NewsViewController: UIViewController{
     var refreshControl: UIRefreshControl!
     var gettingNews = false
     
+
     var selectedNews : News?
     
     var newsFromTable: [News] = [] {
         didSet {
-            self.tableNews.reloadData()
+            
         }
     }
     
@@ -51,11 +54,6 @@ class NewsViewController: UIViewController{
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -184,6 +182,7 @@ extension NewsViewController {
             self.newsFromTable += news
             print(self.newsFromTable.count)
             self.refreshControl.endRefreshing()
+            self.tableNews.reloadData()
 
         })
         
@@ -243,10 +242,10 @@ extension NewsViewController : UITableViewDataSource {
         newsCell.titleLable.text = newsAtIndexPath.tittle
         newsCell.newsImage.image = newsAtIndexPath.image
         newsCell.newsImage.contentMode = .scaleAspectFill
-       
         
+
         DispatchQueue.global().async {
-        
+            
             if newsAtIndexPath.image == nil {
                 
                 if let imageNews = newsAtIndexPath.linkImage, let url = URL(string: imageNews) {
@@ -257,7 +256,7 @@ extension NewsViewController : UITableViewDataSource {
                         
                         self.newsFromTable[indexPath.row].image = UIImage(data: dataImage)
                         
-                        self.tableNews.reloadRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.fade)
+                        self.tableNews.reloadRows(at: [indexPath as IndexPath], with: .none)
                     }
                 }
             }

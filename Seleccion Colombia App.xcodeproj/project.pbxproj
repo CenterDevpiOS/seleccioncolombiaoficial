@@ -43,6 +43,7 @@
 		DA5F46101EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460F1EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png */; };
 		DA5F46131EEF41B100F3412D /* AGENCYB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46121EEF41B100F3412D /* AGENCYB.TTF */; };
 		DA5F46171EEF66D800F3412D /* powered_by_movistar_new (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46161EEF66D800F3412D /* powered_by_movistar_new (1).png */; };
+		DA799E5B1EF7F4CC003AEB20 /* UIDevice+ReturnModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA799E5A1EF7F4CC003AEB20 /* UIDevice+ReturnModels.swift */; };
 		FBEBB1BB1EEDAC0A000125A0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BA1EEDAC0A000125A0 /* NewsTableViewCell.swift */; };
 		FBEBB1BD1EEDB07A000125A0 /* NetworkManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BC1EEDB07A000125A0 /* NetworkManagement.swift */; };
 		FBEBB1BF1EEDB12C000125A0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BE1EEDB12C000125A0 /* News.swift */; };
@@ -105,6 +106,7 @@
 		DA5F460F1EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu App Selecccion Colombia 2-01.png"; sourceTree = "<group>"; };
 		DA5F46121EEF41B100F3412D /* AGENCYB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AGENCYB.TTF; sourceTree = "<group>"; };
 		DA5F46161EEF66D800F3412D /* powered_by_movistar_new (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powered_by_movistar_new (1).png"; sourceTree = "<group>"; };
+		DA799E5A1EF7F4CC003AEB20 /* UIDevice+ReturnModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+ReturnModels.swift"; sourceTree = "<group>"; };
 		E052547D9EF5B0030F54EB1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F02C2745533EA0491878AE95 /* Pods-Seleccion Colombia App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seleccion Colombia App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seleccion Colombia App/Pods-Seleccion Colombia App.release.xcconfig"; sourceTree = "<group>"; };
 		F6EA6E0DEB8C265A968448D0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -198,6 +200,7 @@
 		DA5F45BB1EECD82C00F3412D /* Seleccion Colombia App */ = {
 			isa = PBXGroup;
 			children = (
+				DA799E591EF7F4AC003AEB20 /* Extensions */,
 				DA5F45F21EEDCDA200F3412D /* Seleccion Colombia App.entitlements */,
 				FBEBB1B71EEDAAE4000125A0 /* Model */,
 				DA5F45ED1EED9E3300F3412D /* Resources */,
@@ -269,6 +272,14 @@
 				DA5F46051EEF0CAF00F3412D /* AppUtility.swift */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		DA799E591EF7F4AC003AEB20 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA799E5A1EF7F4CC003AEB20 /* UIDevice+ReturnModels.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		FBEBB1B71EEDAAE4000125A0 /* Model */ = {
@@ -548,6 +559,7 @@
 				DA5F46041EEE100A00F3412D /* WebViewController.swift in Sources */,
 				FBEBB1C51EEDD172000125A0 /* ExtensionViewController.swift in Sources */,
 				DA5F46061EEF0CAF00F3412D /* AppUtility.swift in Sources */,
+				DA799E5B1EF7F4CC003AEB20 /* UIDevice+ReturnModels.swift in Sources */,
 				FBEBB1BD1EEDB07A000125A0 /* NetworkManagement.swift in Sources */,
 				DA5F45BD1EECD82C00F3412D /* AppDelegate.swift in Sources */,
 				DA5F45E91EED8EAF00F3412D /* SCSideMenuNavigationController.swift in Sources */,

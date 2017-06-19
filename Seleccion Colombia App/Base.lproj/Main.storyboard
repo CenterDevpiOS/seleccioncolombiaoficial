@@ -42,11 +42,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 67 - Menu screen" translatesAutoresizingMaskIntoConstraints="NO" id="2sq-gv-gCY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65m-4i-hZE">
-                                <rect key="frame" x="0.0" y="135" width="376" height="146"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="146" id="i0s-sK-yqZ"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65m-4i-hZE">
+                                <rect key="frame" x="0.0" y="236" width="375" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="closeMenuWithButton:" destination="SkF-7u-67H" eventType="touchUpInside" id="CQm-oC-Kte"/>
                                 </connections>
@@ -56,12 +54,8 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2sq-gv-gCY" secondAttribute="trailing" id="CUN-hD-0bg"/>
                             <constraint firstItem="2sq-gv-gCY" firstAttribute="leading" secondItem="4qa-AZ-qUr" secondAttribute="leading" id="LxI-6R-Ehb"/>
-                            <constraint firstAttribute="trailing" secondItem="65m-4i-hZE" secondAttribute="trailing" constant="-1" id="QYd-j4-9mj"/>
-                            <constraint firstItem="65m-4i-hZE" firstAttribute="leading" secondItem="4qa-AZ-qUr" secondAttribute="leading" id="Rwe-L3-Zbl"/>
                             <constraint firstItem="2sq-gv-gCY" firstAttribute="top" secondItem="4qa-AZ-qUr" secondAttribute="top" id="fAd-Kk-g5N"/>
                             <constraint firstItem="8H8-6k-1Is" firstAttribute="top" secondItem="2sq-gv-gCY" secondAttribute="bottom" id="mSk-QF-KGp"/>
-                            <constraint firstItem="65m-4i-hZE" firstAttribute="centerX" secondItem="4qa-AZ-qUr" secondAttribute="centerX" id="uib-pf-8S3"/>
-                            <constraint firstItem="65m-4i-hZE" firstAttribute="top" secondItem="Vln-NG-RCN" secondAttribute="bottom" constant="135" id="zGc-TO-vYa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HO9-6d-pOc"/>
@@ -69,11 +63,12 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="menuImageView" destination="2sq-gv-gCY" id="LgQ-sf-aHo"/>
+                        <outlet property="newsButton" destination="65m-4i-hZE" id="iC7-gy-gn9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86Q-2M-O5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93.599999999999994" y="135.38230884557723"/>
+            <point key="canvasLocation" x="89.855072463768124" y="132.88043478260872"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -91,7 +86,7 @@
                                 <rect key="frame" x="-4" y="60" width="383" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I2-ga-EOf">
-                                        <rect key="frame" x="172.5" y="-0.5" width="39" height="24.5"/>
+                                        <rect key="frame" x="172" y="-0.5" width="39" height="24"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Condensed-Bold" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -116,13 +111,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colombia_news_watermark" translatesAutoresizingMaskIntoConstraints="NO" id="rlB-sq-VMV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="667" height="178"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="178" id="7xs-k6-ZPi"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CeZ-bM-1QI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="667" height="178"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="178" id="NVa-Ka-bjh"/>
                                                     </constraints>
@@ -138,13 +133,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entérate cómo le fue a " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPs-iZ-NEs">
-                                                    <rect key="frame" x="8" y="200" width="555" height="22"/>
+                                                    <rect key="frame" x="8" y="200" width="263" height="22"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Condensed" family="Helvetica" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbA-2Z-lIG">
-                                                    <rect key="frame" x="571" y="196" width="96" height="25"/>
+                                                    <rect key="frame" x="279" y="196" width="96" height="25"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="96" id="bpS-I9-GSY"/>
@@ -376,7 +371,7 @@
                                 <rect key="frame" x="-4" y="60" width="383" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noticias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wom-ww-j7o">
-                                        <rect key="frame" x="163.5" y="0.5" width="57" height="24.5"/>
+                                        <rect key="frame" x="163.5" y="0.5" width="57" height="24"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Condensed-Bold" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -558,7 +553,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oT3-s3-Xfj" customClass="SCSideMenuNavigationController" customModule="Seleccion_Colombia_App" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="93V-4H-i0l">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="93V-4H-i0l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -579,7 +574,7 @@
             <objects>
                 <navigationController storyboardIdentifier="homeVC" automaticallyAdjustsScrollViewInsets="NO" id="FGK-fb-HBi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hlr-ZQ-Hhj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hlr-ZQ-Hhj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
