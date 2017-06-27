@@ -22,7 +22,6 @@ class NewsViewController: UIViewController{
     
     var refreshControl: UIRefreshControl!
     var gettingNews = false
-    
 
     var selectedNews : News?
     
@@ -103,7 +102,11 @@ class NewsViewController: UIViewController{
     
     func backToTopAction()  {
         self.tableNews.scrollsToTop = true
-        tableNews.setContentOffset(CGPoint.zero, animated: true)
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        
+        tableNews.scrollToRow(at: indexPath, at: .top, animated: true)
+        
     }
     
     func setRefreshControl () {
@@ -232,6 +235,7 @@ extension NewsViewController : UITableViewDataSource {
         guard  let newsCell = tableView.dequeueReusableCell(withIdentifier: "news") as? NewsTableViewCell else {
            return UITableViewCell()
         }
+        
         
         let newsAtIndexPath = newsFromTable[indexPath.row]
         
