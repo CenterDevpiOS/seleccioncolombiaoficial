@@ -13,22 +13,21 @@ struct ConstantsNews {
     
     // MARK: Constants
     struct ParseConstants {
-        
         // MARK: URLs
         static let apiScheme = "http"
         static let apiHost = "fcf.2waysports.com"
-        
-        
     }
     
     // MARK: Methods
     struct Methods {
-        
-        static let searchNews = "/2waysports/Colombia/Noticias/noticias_new.php"
+        static let searchNews = "Noticias/noticias_new.php"
     }
     
     struct UrlKeys {
         static let page = "pag"
+        static let primerid = "primerid"
+        static let ultimoid = "ultimoid"
+
     }
     
     // MARK: JSON Body Keys
@@ -40,7 +39,8 @@ struct ConstantsNews {
     struct JSONBodyResponseParseKeys {
         //data
         static let data = "data"
-        
+        static let eliminadas = "eliminadas"
+
         //News
         static let idNew = "idNew"
         static let linkNew = "linkNew"

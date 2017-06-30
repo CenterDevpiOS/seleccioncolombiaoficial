@@ -25,4 +25,13 @@ struct AppUtility {
         UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
     }
     
+    static func isBSC() -> Bool{
+        let targetName = Bundle.main.infoDictionary?["TargetName"] as? String
+        
+        if let _ = targetName, targetName == "BarcelonaSC"{
+            return true
+        }else{
+            return false
+        }
+    }
 }

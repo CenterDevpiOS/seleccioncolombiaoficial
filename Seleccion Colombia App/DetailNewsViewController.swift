@@ -13,12 +13,22 @@ class DetailNewsViewController: UIViewController {
     @IBOutlet weak var imageNews: UIImageView!
     @IBOutlet weak var titleNewLabel: UILabel!
     @IBOutlet weak var descriptionNew: UILabel!
+    @IBOutlet var divider: UIView!
+    @IBOutlet var newsLabel: UILabel!
+    @IBOutlet var appOfficialLbl: UILabel!
+    @IBOutlet var poweredBy: UIImageView!
+    @IBOutlet var menuBttn: UIButton!
+    @IBOutlet var footer: UIImageView!
+    @IBOutlet var banner: UIImageView!
     
     var selectedNews : News?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if AppUtility.isBSC(){
+            prepareUI()
+        }
         navigationController?.navigationBar.isHidden = true
         prepareView()
         
@@ -37,7 +47,15 @@ class DetailNewsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    private func prepareUI(){
+        banner.isHidden = false
+        divider.backgroundColor = Color.yellow.color
+        newsLabel.textColor = Color.black.color
+        appOfficialLbl.isHidden = true
+        poweredBy.isHidden = true
+        menuBttn.setTitleColor(Color.yellow.color, for: .normal)
+        footer.isHidden = true
+    }
     /*
     // MARK: - Navigation
 
@@ -51,7 +69,7 @@ class DetailNewsViewController: UIViewController {
 }
 
 extension DetailNewsViewController {
-
+    
     func prepareView(){
         if let image = selectedNews?.image {
             imageNews.image = image

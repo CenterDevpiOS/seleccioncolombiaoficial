@@ -9,20 +9,69 @@
 /* Begin PBXBuildFile section */
 		00AD3A30C2685FE1BB815EA0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EA6E0DEB8C265A968448D0 /* CoreText.framework */; };
 		0AD701BB095C5A378D4676EE /* Pods_Seleccion_Colombia_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7323B400FC80AC7B5AF37BC /* Pods_Seleccion_Colombia_AppTests.framework */; };
+		126903E1B964513A1938D98B /* Pods_BarcelonaSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CA5A3909CACC75BB180D70 /* Pods_BarcelonaSC.framework */; };
 		281FCB7645CEF860ACA9530D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFCA62C6994DADE7C1D20C3 /* CoreTelephony.framework */; };
+		3C3CAD171F042D2F00A1CA34 /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CAD161F042D2F00A1CA34 /* VideoLauncher.swift */; };
+		3C3CAD191F049E6F00A1CA34 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA83CBF1F0405490000FA16 /* LiveViewController.swift */; };
+		3C3CAD1B1F0542A400A1CA34 /* GoogleServiceBSC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3CAD1A1F0542A400A1CA34 /* GoogleServiceBSC-Info.plist */; };
+		3C3CAD201F05CBC100A1CA34 /* Deleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CAD1F1F05CBC100A1CA34 /* Deleted.swift */; };
+		3C3CAD211F05CBC100A1CA34 /* Deleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CAD1F1F05CBC100A1CA34 /* Deleted.swift */; };
+		3CA83C831F0306B60000FA16 /* SCIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45EB1EED9A2A00F3412D /* SCIntroViewController.swift */; };
+		3CA83C841F0306B60000FA16 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45BE1EECD82C00F3412D /* NewsViewController.swift */; };
+		3CA83C861F0306B60000FA16 /* SCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA186CC01EF0A07D002C5E19 /* SCPlayerViewController.swift */; };
+		3CA83C871F0306B60000FA16 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BE1EEDB12C000125A0 /* News.swift */; };
+		3CA83C881F0306B60000FA16 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BA1EEDAC0A000125A0 /* NewsTableViewCell.swift */; };
+		3CA83C891F0306B60000FA16 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1C61EEDE0A3000125A0 /* DetailNewsViewController.swift */; };
+		3CA83C8A1F0306B60000FA16 /* SCMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45E51EED880400F3412D /* SCMenuViewController.swift */; };
+		3CA83C8B1F0306B60000FA16 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F46031EEE100A00F3412D /* WebViewController.swift */; };
+		3CA83C8C1F0306B60000FA16 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1C41EEDD172000125A0 /* ExtensionViewController.swift */; };
+		3CA83C8D1F0306B60000FA16 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F46051EEF0CAF00F3412D /* AppUtility.swift */; };
+		3CA83C8E1F0306B60000FA16 /* UIDevice+ReturnModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA799E5A1EF7F4CC003AEB20 /* UIDevice+ReturnModels.swift */; };
+		3CA83C8F1F0306B60000FA16 /* NetworkManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1BC1EEDB07A000125A0 /* NetworkManagement.swift */; };
+		3CA83C901F0306B60000FA16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45BC1EECD82C00F3412D /* AppDelegate.swift */; };
+		3CA83C911F0306B60000FA16 /* SCSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45E81EED8EAF00F3412D /* SCSideMenuNavigationController.swift */; };
+		3CA83C941F0306B60000FA16 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DE4894435DE0020965181B /* BuddyBuildSDK.framework */; };
+		3CA83C951F0306B60000FA16 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D364241E897C98AF53923A /* AssetsLibrary.framework */; };
+		3CA83C961F0306B60000FA16 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EA6E0DEB8C265A968448D0 /* CoreText.framework */; };
+		3CA83C971F0306B60000FA16 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFCA62C6994DADE7C1D20C3 /* CoreTelephony.framework */; };
+		3CA83C981F0306B60000FA16 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C4BD1B6BC7DE4CA2CEB9A0 /* SystemConfiguration.framework */; };
+		3CA83C991F0306B60000FA16 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E052547D9EF5B0030F54EB1C /* QuartzCore.framework */; };
+		3CA83C9A1F0306B60000FA16 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C54C48852F443A33A641061 /* AVFoundation.framework */; };
+		3CA83C9B1F0306B60000FA16 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6029455E66C389D84C3C30C /* CoreMedia.framework */; };
+		3CA83C9C1F0306B60000FA16 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467A38618F969C409CAE9F46 /* CoreVideo.framework */; };
+		3CA83C9F1F0306B60000FA16 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46091EEF147100F3412D /* OpenSans-Semibold.ttf */; };
+		3CA83CA01F0306B60000FA16 /* powered_by_movistar_new (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46161EEF66D800F3412D /* powered_by_movistar_new (1).png */; };
+		3CA83CA11F0306B60000FA16 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46071EEF13F200F3412D /* OpenSans-Bold.ttf */; };
+		3CA83CA21F0306B60000FA16 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45FC1EEE039800F3412D /* OpenSans-Italic.ttf */; };
+		3CA83CA31F0306B60000FA16 /* 2017-06-12-PHOTO-00000354.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460D1EEF1BB700F3412D /* 2017-06-12-PHOTO-00000354.jpg */; };
+		3CA83CA61F0306B60000FA16 /* Agency_FB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45F91EEE039800F3412D /* Agency_FB.ttf */; };
+		3CA83CA81F0306B60000FA16 /* Menu App Selecccion Colombia 2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F460F1EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png */; };
+		3CA83CA91F0306B60000FA16 /* Helvetica-Condensed_2.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45FA1EEE039800F3412D /* Helvetica-Condensed_2.otf */; };
+		3CA83CAA1F0306B60000FA16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45C01EECD82C00F3412D /* Main.storyboard */; };
+		3CA83CAB1F0306B60000FA16 /* Helvetica-Condensed-Bold_0.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45FB1EEE039800F3412D /* Helvetica-Condensed-Bold_0.otf */; };
+		3CA83CAC1F0306B60000FA16 /* AGENCYB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DA5F46121EEF41B100F3412D /* AGENCYB.TTF */; };
+		3CA83CAD1F0306B60000FA16 /* OpenSans-Regular_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45FD1EEE039800F3412D /* OpenSans-Regular_0.ttf */; };
+		3CA83CB61F03082E0000FA16 /* AssetsBarcelonaSC.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA83CB51F03082E0000FA16 /* AssetsBarcelonaSC.xcassets */; };
+		3CA83CB71F031FCD0000FA16 /* ConstantsNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBB1C01EEDB4E2000125A0 /* ConstantsNews.swift */; };
+		3CA83CB91F0320A30000FA16 /* IntroBSC.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3CA83CB81F0320A30000FA16 /* IntroBSC.mp4 */; };
+		3CA83CBA1F0323120000FA16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45C01EECD82C00F3412D /* Main.storyboard */; };
+		3CA83CBC1F0328BB0000FA16 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA83CBB1F0328BB0000FA16 /* Color.swift */; };
+		3CA83CBD1F0328BB0000FA16 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA83CBB1F0328BB0000FA16 /* Color.swift */; };
+		3CA83CC01F0405490000FA16 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA83CBF1F0405490000FA16 /* LiveViewController.swift */; };
+		3CA83CC21F0407F50000FA16 /* LaunchScreenBCS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA83CC11F0407F50000FA16 /* LaunchScreenBCS.storyboard */; };
 		48104C878188CA0C739F0103 /* Pods_Seleccion_Colombia_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7971E40A6AC3E5C3FD93A37 /* Pods_Seleccion_Colombia_App.framework */; };
 		493774C2A8CBC9CDEEABB363 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E052547D9EF5B0030F54EB1C /* QuartzCore.framework */; };
 		5144D8F8837EC498B4B07A10 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C54C48852F443A33A641061 /* AVFoundation.framework */; };
+		7103CFAD0AD807B9940B8E1C /* Pods_Seleccion_Colombia_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7971E40A6AC3E5C3FD93A37 /* Pods_Seleccion_Colombia_App.framework */; };
 		74056802E80F4FDF30AD0C60 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6029455E66C389D84C3C30C /* CoreMedia.framework */; };
 		8570D4A8D921387C440D5071 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D364241E897C98AF53923A /* AssetsLibrary.framework */; };
 		A1C12627B5BEA4BDF81AA8B3 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DE4894435DE0020965181B /* BuddyBuildSDK.framework */; };
 		B07A65E002CD6F93E9E4B5D6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467A38618F969C409CAE9F46 /* CoreVideo.framework */; };
 		D39588FF068AEB41D315E698 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C4BD1B6BC7DE4CA2CEB9A0 /* SystemConfiguration.framework */; };
-		DA186CBF1EF040C9002C5E19 /* Intro v3-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA186CBE1EF040C9002C5E19 /* Intro v3-1.mp4 */; };
+		DA186CBF1EF040C9002C5E19 /* IntroColombia.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA186CBE1EF040C9002C5E19 /* IntroColombia.mp4 */; };
 		DA186CC11EF0A07D002C5E19 /* SCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA186CC01EF0A07D002C5E19 /* SCPlayerViewController.swift */; };
 		DA5F45BD1EECD82C00F3412D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45BC1EECD82C00F3412D /* AppDelegate.swift */; };
 		DA5F45BF1EECD82C00F3412D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45BE1EECD82C00F3412D /* NewsViewController.swift */; };
-		DA5F45C21EECD82C00F3412D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45C01EECD82C00F3412D /* Main.storyboard */; };
 		DA5F45C41EECD82C00F3412D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45C31EECD82C00F3412D /* Assets.xcassets */; };
 		DA5F45C71EECD82C00F3412D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F45C51EECD82C00F3412D /* LaunchScreen.storyboard */; };
 		DA5F45D21EECD82C00F3412D /* Seleccion_Colombia_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F45D11EECD82C00F3412D /* Seleccion_Colombia_AppTests.swift */; };
@@ -64,19 +113,33 @@
 
 /* Begin PBXFileReference section */
 		323B7E4E17CC228B9192BFE3 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		3C3CAD161F042D2F00A1CA34 /* VideoLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoLauncher.swift; sourceTree = "<group>"; };
+		3C3CAD1A1F0542A400A1CA34 /* GoogleServiceBSC-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleServiceBSC-Info.plist"; sourceTree = "<group>"; };
+		3C3CAD1F1F05CBC100A1CA34 /* Deleted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deleted.swift; sourceTree = "<group>"; };
+		3CA83CB31F0306B60000FA16 /* BarcelonaSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcelonaSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CA83CB41F0306B70000FA16 /* BarcelonaSC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BarcelonaSC-Info.plist"; path = "/Users/gracielalucena/seleccioncolombiaoficial/BarcelonaSC-Info.plist"; sourceTree = "<absolute>"; };
+		3CA83CB51F03082E0000FA16 /* AssetsBarcelonaSC.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetsBarcelonaSC.xcassets; sourceTree = "<group>"; };
+		3CA83CB81F0320A30000FA16 /* IntroBSC.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IntroBSC.mp4; sourceTree = "<group>"; };
+		3CA83CBB1F0328BB0000FA16 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3CA83CBF1F0405490000FA16 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		3CA83CC11F0407F50000FA16 /* LaunchScreenBCS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreenBCS.storyboard; sourceTree = "<group>"; };
 		40C4BD1B6BC7DE4CA2CEB9A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		46066A475A3B9ADF7CD2AF49 /* Pods-Seleccion Colombia AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seleccion Colombia AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seleccion Colombia AppTests/Pods-Seleccion Colombia AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		467A38618F969C409CAE9F46 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4D707FAFA087C165816BD4CE /* Pods-BarcelonaSC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcelonaSC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarcelonaSC/Pods-BarcelonaSC.debug.xcconfig"; sourceTree = "<group>"; };
 		5953642CB249E7271E4D957C /* Pods-Seleccion Colombia AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seleccion Colombia AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seleccion Colombia AppTests/Pods-Seleccion Colombia AppTests.release.xcconfig"; sourceTree = "<group>"; };
-		68EF7D2E49D54A7EC2A62CD4 /* Pods-Seleccion Colombia App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seleccion Colombia App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seleccion Colombia App/Pods-Seleccion Colombia App.debug.xcconfig"; sourceTree = "<group>"; };
 		7C54C48852F443A33A641061 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7EFCA62C6994DADE7C1D20C3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7F4D8E6D44942AF6829EA1EF /* Pods-Seleccion Colombia App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seleccion Colombia App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seleccion Colombia App/Pods-Seleccion Colombia App.release.xcconfig"; sourceTree = "<group>"; };
+		82CA5A3909CACC75BB180D70 /* Pods_BarcelonaSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarcelonaSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DE4894435DE0020965181B /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		A7971E40A6AC3E5C3FD93A37 /* Pods_Seleccion_Colombia_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seleccion_Colombia_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE283B5670A557230287CF0 /* Pods-Seleccion Colombia App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seleccion Colombia App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seleccion Colombia App/Pods-Seleccion Colombia App.debug.xcconfig"; sourceTree = "<group>"; };
 		B6029455E66C389D84C3C30C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B7323B400FC80AC7B5AF37BC /* Pods_Seleccion_Colombia_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seleccion_Colombia_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B98615311130C768E98575E9 /* Pods-BarcelonaSC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcelonaSC.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarcelonaSC/Pods-BarcelonaSC.release.xcconfig"; sourceTree = "<group>"; };
 		C1D364241E897C98AF53923A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		DA186CBE1EF040C9002C5E19 /* Intro v3-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Intro v3-1.mp4"; sourceTree = "<group>"; };
+		DA186CBE1EF040C9002C5E19 /* IntroColombia.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IntroColombia.mp4; sourceTree = "<group>"; };
 		DA186CC01EF0A07D002C5E19 /* SCPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPlayerViewController.swift; sourceTree = "<group>"; };
 		DA5F45B91EECD82C00F3412D /* Seleccion Colombia App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seleccion Colombia App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F45BC1EECD82C00F3412D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +171,6 @@
 		DA5F46161EEF66D800F3412D /* powered_by_movistar_new (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powered_by_movistar_new (1).png"; sourceTree = "<group>"; };
 		DA799E5A1EF7F4CC003AEB20 /* UIDevice+ReturnModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+ReturnModels.swift"; sourceTree = "<group>"; };
 		E052547D9EF5B0030F54EB1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		F02C2745533EA0491878AE95 /* Pods-Seleccion Colombia App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seleccion Colombia App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seleccion Colombia App/Pods-Seleccion Colombia App.release.xcconfig"; sourceTree = "<group>"; };
 		F6EA6E0DEB8C265A968448D0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		FBEBB1BA1EEDAC0A000125A0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		FBEBB1BC1EEDB07A000125A0 /* NetworkManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagement.swift; sourceTree = "<group>"; };
@@ -119,6 +181,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3CA83C921F0306B60000FA16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CA83C941F0306B60000FA16 /* BuddyBuildSDK.framework in Frameworks */,
+				3CA83C951F0306B60000FA16 /* AssetsLibrary.framework in Frameworks */,
+				3CA83C961F0306B60000FA16 /* CoreText.framework in Frameworks */,
+				3CA83C971F0306B60000FA16 /* CoreTelephony.framework in Frameworks */,
+				3CA83C981F0306B60000FA16 /* SystemConfiguration.framework in Frameworks */,
+				3CA83C991F0306B60000FA16 /* QuartzCore.framework in Frameworks */,
+				3CA83C9A1F0306B60000FA16 /* AVFoundation.framework in Frameworks */,
+				3CA83C9B1F0306B60000FA16 /* CoreMedia.framework in Frameworks */,
+				3CA83C9C1F0306B60000FA16 /* CoreVideo.framework in Frameworks */,
+				126903E1B964513A1938D98B /* Pods_BarcelonaSC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA5F45B61EECD82C00F3412D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +212,7 @@
 				5144D8F8837EC498B4B07A10 /* AVFoundation.framework in Frameworks */,
 				74056802E80F4FDF30AD0C60 /* CoreMedia.framework in Frameworks */,
 				B07A65E002CD6F93E9E4B5D6 /* CoreVideo.framework in Frameworks */,
+				7103CFAD0AD807B9940B8E1C /* Pods_Seleccion_Colombia_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,13 +227,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C3CAD181F04618400A1CA34 /* LiveBSC */ = {
+			isa = PBXGroup;
+			children = (
+				3CA83CBF1F0405490000FA16 /* LiveViewController.swift */,
+				3C3CAD161F042D2F00A1CA34 /* VideoLauncher.swift */,
+			);
+			name = LiveBSC;
+			sourceTree = "<group>";
+		};
 		64F3A21F0C30994E385BFD23 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				68EF7D2E49D54A7EC2A62CD4 /* Pods-Seleccion Colombia App.debug.xcconfig */,
-				F02C2745533EA0491878AE95 /* Pods-Seleccion Colombia App.release.xcconfig */,
 				46066A475A3B9ADF7CD2AF49 /* Pods-Seleccion Colombia AppTests.debug.xcconfig */,
 				5953642CB249E7271E4D957C /* Pods-Seleccion Colombia AppTests.release.xcconfig */,
+				ADE283B5670A557230287CF0 /* Pods-Seleccion Colombia App.debug.xcconfig */,
+				7F4D8E6D44942AF6829EA1EF /* Pods-Seleccion Colombia App.release.xcconfig */,
+				4D707FAFA087C165816BD4CE /* Pods-BarcelonaSC.debug.xcconfig */,
+				B98615311130C768E98575E9 /* Pods-BarcelonaSC.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -172,6 +263,7 @@
 				7C54C48852F443A33A641061 /* AVFoundation.framework */,
 				B6029455E66C389D84C3C30C /* CoreMedia.framework */,
 				467A38618F969C409CAE9F46 /* CoreVideo.framework */,
+				82CA5A3909CACC75BB180D70 /* Pods_BarcelonaSC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,6 +277,7 @@
 				64F3A21F0C30994E385BFD23 /* Pods */,
 				ADD6301CDA58FC7D3A52EFCA /* Frameworks */,
 				323B7E4E17CC228B9192BFE3 /* Bridging-Header.h */,
+				3CA83CB41F0306B70000FA16 /* BarcelonaSC-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +286,7 @@
 			children = (
 				DA5F45B91EECD82C00F3412D /* Seleccion Colombia App.app */,
 				DA5F45CD1EECD82C00F3412D /* Seleccion Colombia AppTests.xctest */,
+				3CA83CB31F0306B60000FA16 /* BarcelonaSC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +306,9 @@
 				DA5F45C51EECD82C00F3412D /* LaunchScreen.storyboard */,
 				DA5F45C81EECD82C00F3412D /* Info.plist */,
 				DA5F45F01EEDCBDC00F3412D /* GoogleService-Info.plist */,
+				3C3CAD1A1F0542A400A1CA34 /* GoogleServiceBSC-Info.plist */,
+				3CA83CB51F03082E0000FA16 /* AssetsBarcelonaSC.xcassets */,
+				3CA83CC11F0407F50000FA16 /* LaunchScreenBCS.storyboard */,
 			);
 			path = "Seleccion Colombia App";
 			sourceTree = "<group>";
@@ -228,6 +325,7 @@
 		DA5F45E41EED87D600F3412D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C3CAD181F04618400A1CA34 /* LiveBSC */,
 				FBEBB1C31EEDD154000125A0 /* common */,
 				FBEBB1B91EEDAAF7000125A0 /* News */,
 				DA5F45EA1EED99D500F3412D /* Intro */,
@@ -268,8 +366,10 @@
 				DA5F46091EEF147100F3412D /* OpenSans-Semibold.ttf */,
 				DA5F45FD1EEE039800F3412D /* OpenSans-Regular_0.ttf */,
 				DA5F460F1EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png */,
-				DA186CBE1EF040C9002C5E19 /* Intro v3-1.mp4 */,
+				DA186CBE1EF040C9002C5E19 /* IntroColombia.mp4 */,
+				3CA83CB81F0320A30000FA16 /* IntroBSC.mp4 */,
 				DA5F46051EEF0CAF00F3412D /* AppUtility.swift */,
+				3CA83CBB1F0328BB0000FA16 /* Color.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -287,6 +387,7 @@
 			children = (
 				FBEBB1C21EEDC9B5000125A0 /* API */,
 				FBEBB1BE1EEDB12C000125A0 /* News.swift */,
+				3C3CAD1F1F05CBC100A1CA34 /* Deleted.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -329,6 +430,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3CA83C801F0306B60000FA16 /* BarcelonaSC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CA83CB01F0306B60000FA16 /* Build configuration list for PBXNativeTarget "BarcelonaSC" */;
+			buildPhases = (
+				1E82A628F3F754819F5A6482 /* [CP] Check Pods Manifest.lock */,
+				3CA83C821F0306B60000FA16 /* Sources */,
+				3CA83C921F0306B60000FA16 /* Frameworks */,
+				3CA83C9D1F0306B60000FA16 /* Resources */,
+				919460C3C00D3C90300C6EA3 /* [CP] Embed Pods Frameworks */,
+				A01DA597B97E391AB72510A0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarcelonaSC;
+			productName = "Seleccion Colombia App";
+			productReference = 3CA83CB31F0306B60000FA16 /* BarcelonaSC.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DA5F45B81EECD82C00F3412D /* Seleccion Colombia App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA5F45D61EECD82C00F3412D /* Build configuration list for PBXNativeTarget "Seleccion Colombia App" */;
@@ -380,6 +501,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "orlando arzola";
 				TargetAttributes = {
+					3CA83C801F0306B60000FA16 = {
+						DevelopmentTeam = 8FMXC86Y7Y;
+						ProvisioningStyle = Automatic;
+					};
 					DA5F45B81EECD82C00F3412D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 9AHCWLF45S;
@@ -413,16 +538,40 @@
 			targets = (
 				DA5F45B81EECD82C00F3412D /* Seleccion Colombia App */,
 				DA5F45CC1EECD82C00F3412D /* Seleccion Colombia AppTests */,
+				3CA83C801F0306B60000FA16 /* BarcelonaSC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3CA83C9D1F0306B60000FA16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CA83C9F1F0306B60000FA16 /* OpenSans-Semibold.ttf in Resources */,
+				3CA83CA01F0306B60000FA16 /* powered_by_movistar_new (1).png in Resources */,
+				3CA83CA11F0306B60000FA16 /* OpenSans-Bold.ttf in Resources */,
+				3CA83CA21F0306B60000FA16 /* OpenSans-Italic.ttf in Resources */,
+				3CA83CA31F0306B60000FA16 /* 2017-06-12-PHOTO-00000354.jpg in Resources */,
+				3C3CAD1B1F0542A400A1CA34 /* GoogleServiceBSC-Info.plist in Resources */,
+				3CA83CB61F03082E0000FA16 /* AssetsBarcelonaSC.xcassets in Resources */,
+				3CA83CA61F0306B60000FA16 /* Agency_FB.ttf in Resources */,
+				3CA83CA81F0306B60000FA16 /* Menu App Selecccion Colombia 2-01.png in Resources */,
+				3CA83CA91F0306B60000FA16 /* Helvetica-Condensed_2.otf in Resources */,
+				3CA83CAA1F0306B60000FA16 /* Main.storyboard in Resources */,
+				3CA83CAB1F0306B60000FA16 /* Helvetica-Condensed-Bold_0.otf in Resources */,
+				3CA83CC21F0407F50000FA16 /* LaunchScreenBCS.storyboard in Resources */,
+				3CA83CAC1F0306B60000FA16 /* AGENCYB.TTF in Resources */,
+				3CA83CAD1F0306B60000FA16 /* OpenSans-Regular_0.ttf in Resources */,
+				3CA83CB91F0320A30000FA16 /* IntroBSC.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA5F45B71EECD82C00F3412D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA186CBF1EF040C9002C5E19 /* Intro v3-1.mp4 in Resources */,
+				DA186CBF1EF040C9002C5E19 /* IntroColombia.mp4 in Resources */,
 				DA5F460A1EEF147100F3412D /* OpenSans-Semibold.ttf in Resources */,
 				DA5F46171EEF66D800F3412D /* powered_by_movistar_new (1).png in Resources */,
 				DA5F46081EEF142F00F3412D /* OpenSans-Bold.ttf in Resources */,
@@ -433,8 +582,8 @@
 				DA5F45FE1EEE03AD00F3412D /* Agency_FB.ttf in Resources */,
 				DA5F45C41EECD82C00F3412D /* Assets.xcassets in Resources */,
 				DA5F46101EEF334C00F3412D /* Menu App Selecccion Colombia 2-01.png in Resources */,
+				3CA83CBA1F0323120000FA16 /* Main.storyboard in Resources */,
 				DA5F45FF1EEE03B000F3412D /* Helvetica-Condensed_2.otf in Resources */,
-				DA5F45C21EECD82C00F3412D /* Main.storyboard in Resources */,
 				DA5F46001EEE03B200F3412D /* Helvetica-Condensed-Bold_0.otf in Resources */,
 				DA5F46131EEF41B100F3412D /* AGENCYB.TTF in Resources */,
 				DA5F46021EEE03B700F3412D /* OpenSans-Regular_0.ttf in Resources */,
@@ -451,6 +600,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E82A628F3F754819F5A6482 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		44B2F4CF5930DD93DADACCD0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,7 +657,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		919460C3C00D3C90300C6EA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BarcelonaSC/Pods-BarcelonaSC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01DA597B97E391AB72510A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BarcelonaSC/Pods-BarcelonaSC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B16FB39905427EAEB1A303F6 /* [CP] Copy Pods Resources */ = {
@@ -538,12 +732,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3CA83C821F0306B60000FA16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CA83C831F0306B60000FA16 /* SCIntroViewController.swift in Sources */,
+				3CA83C841F0306B60000FA16 /* NewsViewController.swift in Sources */,
+				3CA83C861F0306B60000FA16 /* SCPlayerViewController.swift in Sources */,
+				3CA83C871F0306B60000FA16 /* News.swift in Sources */,
+				3CA83C881F0306B60000FA16 /* NewsTableViewCell.swift in Sources */,
+				3CA83CBD1F0328BB0000FA16 /* Color.swift in Sources */,
+				3CA83C891F0306B60000FA16 /* DetailNewsViewController.swift in Sources */,
+				3CA83C8A1F0306B60000FA16 /* SCMenuViewController.swift in Sources */,
+				3CA83C8B1F0306B60000FA16 /* WebViewController.swift in Sources */,
+				3CA83C8C1F0306B60000FA16 /* ExtensionViewController.swift in Sources */,
+				3CA83CB71F031FCD0000FA16 /* ConstantsNews.swift in Sources */,
+				3C3CAD211F05CBC100A1CA34 /* Deleted.swift in Sources */,
+				3CA83C8D1F0306B60000FA16 /* AppUtility.swift in Sources */,
+				3CA83C8E1F0306B60000FA16 /* UIDevice+ReturnModels.swift in Sources */,
+				3C3CAD171F042D2F00A1CA34 /* VideoLauncher.swift in Sources */,
+				3CA83C8F1F0306B60000FA16 /* NetworkManagement.swift in Sources */,
+				3CA83CC01F0405490000FA16 /* LiveViewController.swift in Sources */,
+				3CA83C901F0306B60000FA16 /* AppDelegate.swift in Sources */,
+				3CA83C911F0306B60000FA16 /* SCSideMenuNavigationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA5F45B51EECD82C00F3412D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -553,6 +773,8 @@
 				FBEBB1C11EEDB4E2000125A0 /* ConstantsNews.swift in Sources */,
 				DA186CC11EF0A07D002C5E19 /* SCPlayerViewController.swift in Sources */,
 				FBEBB1BF1EEDB12C000125A0 /* News.swift in Sources */,
+				3C3CAD201F05CBC100A1CA34 /* Deleted.swift in Sources */,
+				3CA83CBC1F0328BB0000FA16 /* Color.swift in Sources */,
 				FBEBB1BB1EEDAC0A000125A0 /* NewsTableViewCell.swift in Sources */,
 				FBEBB1C71EEDE0A3000125A0 /* DetailNewsViewController.swift in Sources */,
 				DA5F45E61EED880400F3412D /* SCMenuViewController.swift in Sources */,
@@ -561,6 +783,7 @@
 				DA5F46061EEF0CAF00F3412D /* AppUtility.swift in Sources */,
 				DA799E5B1EF7F4CC003AEB20 /* UIDevice+ReturnModels.swift in Sources */,
 				FBEBB1BD1EEDB07A000125A0 /* NetworkManagement.swift in Sources */,
+				3C3CAD191F049E6F00A1CA34 /* LiveViewController.swift in Sources */,
 				DA5F45BD1EECD82C00F3412D /* AppDelegate.swift in Sources */,
 				DA5F45E91EED8EAF00F3412D /* SCSideMenuNavigationController.swift in Sources */,
 			);
@@ -604,6 +827,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3CA83CB11F0306B60000FA16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D707FAFA087C165816BD4CE /* Pods-BarcelonaSC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Seleccion Colombia App/Seleccion Colombia App.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8FMXC86Y7Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "BarcelonaSC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BarcelonaSC.BarcelonaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CA83CB21F0306B60000FA16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98615311130C768E98575E9 /* Pods-BarcelonaSC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Seleccion Colombia App/Seleccion Colombia App.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8FMXC86Y7Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "BarcelonaSC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BarcelonaSC.BarcelonaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DA5F45D41EECD82C00F3412D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -699,7 +972,7 @@
 		};
 		DA5F45D71EECD82C00F3412D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68EF7D2E49D54A7EC2A62CD4 /* Pods-Seleccion Colombia App.debug.xcconfig */;
+			baseConfigurationReference = ADE283B5670A557230287CF0 /* Pods-Seleccion Colombia App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Seleccion Colombia App/Seleccion Colombia App.entitlements";
@@ -724,7 +997,7 @@
 		};
 		DA5F45D81EECD82C00F3412D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F02C2745533EA0491878AE95 /* Pods-Seleccion Colombia App.release.xcconfig */;
+			baseConfigurationReference = 7F4D8E6D44942AF6829EA1EF /* Pods-Seleccion Colombia App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Seleccion Colombia App/Seleccion Colombia App.entitlements";
@@ -782,6 +1055,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3CA83CB01F0306B60000FA16 /* Build configuration list for PBXNativeTarget "BarcelonaSC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CA83CB11F0306B60000FA16 /* Debug */,
+				3CA83CB21F0306B60000FA16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DA5F45B41EECD82C00F3412D /* Build configuration list for PBXProject "Seleccion Colombia App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

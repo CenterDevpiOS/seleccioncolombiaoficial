@@ -14,12 +14,12 @@ struct NetworkManagement {
     
     static func requestNews(with page: Int, completionHandler: @escaping (_ result: [News]?, _ error:
         Error?) -> Void){
-    
+        
         
         let network = NetworkManagement()
         Alamofire.request(Router.searchNews(page: page)).response { (response) in
-         
-  
+            
+            
             guard response.error == nil else {
                 return completionHandler(nil, response.error!)
             }
@@ -41,18 +41,71 @@ struct NetworkManagement {
                 
             })
         }
-
+        
     }
     
     
+    static func requestBSCNews(with page: Int, primerid: Int?, ultimoid: Int?, completionHandler: @escaping (_ result: [News]?, _ deleted: [Deleted]?, _ error:
+        Error?) -> Void){
+        
+        
+        let network = NetworkManagement()
+        Alamofire.request(Router.searchBSCNews(page: page, primerid: primerid, ultimoid: ultimoid)).response { (response) in
+            
+            
+            guard response.error == nil else {
+                return completionHandler(nil,nil, response.error!)
+            }
+            
+            network.convertDataWithCompletionHandler(response.data!, completionHandlerForConvertData: { (responseJson, error) in
+                
+                guard let dic = responseJson as? [String:AnyObject] else {
+                    return
+                }
+                
+                guard let newsDict = dic[ConstantsNews.JSONBodyResponseParseKeys.data] as? [[String:AnyObject]] else {
+                    return
+                }
+                
+                guard let deletedDict = dic[ConstantsNews.JSONBodyResponseParseKeys.eliminadas] as? [[String:AnyObject]] else {
+                    return
+                }
+                
+                let arrayOfNews = News.arrayOfNews(from: newsDict)
+                let arrayOfDeletedNews = Deleted.arrayOfDeletedNews(from: deletedDict)
+
+                
+                completionHandler(arrayOfNews,arrayOfDeletedNews,nil)
+                
+            })
+        }
+        
+    }
 }
 
 
 enum Router: URLRequestConvertible {
-    case searchNews(page: Int)
     
-    static let baseURLString = "http://fcf.2waysports.com"
+    case searchNews(page: Int)
+    case searchBSCNews(page: Int, primerid: Int?, ultimoid: Int?)
+
+    var baseURLString: String {
+        
+        if AppUtility.isBSC(){
+            return "http://2waysports.com"
+        }else{
+            return "http://fcf.2waysports.com"
+        }
+    }
     static let perPage = 50
+    var baseURLPath: String {
+        
+        if AppUtility.isBSC(){
+            return "/barcelona/"
+        }else{
+            return "/2waysports/Colombia/"
+        }
+    }
     
     // MARK: URLRequestConvertible
     
@@ -60,14 +113,18 @@ enum Router: URLRequestConvertible {
         let result: (path: String, parameters: Parameters) = {
             switch self {
             case let .searchNews(page) where page >= 0:
-                return (ConstantsNews.Methods.searchNews, [ConstantsNews.UrlKeys.page : page])
+                return ("\(baseURLPath)\(ConstantsNews.Methods.searchNews)", [ConstantsNews.UrlKeys.page : page])
+            case let .searchBSCNews(page, primerid, ultimoid) where page > 1:
+                return ("\(baseURLPath)\(ConstantsNews.Methods.searchNews)", [ConstantsNews.UrlKeys.page : page,
+                    ConstantsNews.UrlKeys.primerid : primerid ?? 0,
+                    ConstantsNews.UrlKeys.ultimoid : ultimoid ?? 0])
             default :
-                return (ConstantsNews.Methods.searchNews, [ConstantsNews.UrlKeys.page : 1])
+                return ("\(baseURLPath)\(ConstantsNews.Methods.searchNews)", [ConstantsNews.UrlKeys.page : 1])
             }
         }()
         
-        let url = try Router.baseURLString.asURL()
-        let urlRequest = URLRequest(url: url.appendingPathComponent(result.path))
+        let url = URL(string: baseURLString)
+        let urlRequest = URLRequest(url: (url?.appendingPathComponent(result.path))!)
         
         print("this is the url : \(result.parameters)")
         

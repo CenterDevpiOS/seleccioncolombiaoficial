@@ -15,6 +15,7 @@ struct News {
     }
     
     
+    var idNew: String
     var date: Date
     var link : String?
     var tittle : String
@@ -24,6 +25,7 @@ struct News {
     var linkImage: String?
     
     init(){
+        idNew = ""
         date = Date()
         link = ""
         tittle = ""
@@ -37,6 +39,10 @@ struct News {
         
         self.init()
         
+        if let id = dictionary[ConstantsNews.JSONBodyResponseParseKeys.idNew] as? String {
+            self.idNew = id
+        }
+
         if let dateNew = dictionary[ConstantsNews.JSONBodyResponseParseKeys.dateNew] as? String {
             let formatter = DateFormatter()
             formatter.dateFormat = "d/MM/yy"

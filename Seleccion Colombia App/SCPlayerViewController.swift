@@ -18,8 +18,16 @@ class SCPlayerViewController: UIViewController, CAAnimationDelegate {
         
         AppUtility.lockOrientation(.portrait)
         
-        guard let path = Bundle.main.path(forResource: "Intro v3-1", ofType:"mp4") else {
-            debugPrint("Intro v3-1.mp4 not found")
+        var introName : String
+        
+        if AppUtility.isBSC(){
+            introName = "IntroBSC"
+        }else{
+            introName = "IntroColombia"
+        }
+
+        guard let path = Bundle.main.path(forResource: introName, ofType:"mp4") else {
+            debugPrint("Intro not found")
             return
         }
         //let url = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")

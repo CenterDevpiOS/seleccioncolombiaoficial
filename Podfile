@@ -12,6 +12,8 @@ target 'Seleccion Colombia App' do
   pod 'Firebase/Messaging'
   pod 'SideMenu'
   pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'HexColors'
+  pod 'TestFairy'
 
 
   target 'Seleccion Colombia AppTests' do
@@ -20,5 +22,20 @@ target 'Seleccion Colombia App' do
     pod 'Firebase/Core'
     pod 'Firebase/Messaging'
   end
+
+end
+
+target 'BarcelonaSC' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    # Pods for Seleccion Colombia App
+    pod 'Alamofire', '~> 4.4'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    pod 'SideMenu'
+    pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'HexColors'
+    pod 'TestFairy'
 
 end

@@ -11,49 +11,73 @@ import AVFoundation
 import AVKit
 import Alamofire
 import MBProgressHUD
-
-
+import MediaPlayer
+import SideMenu
 
 class NewsViewController: UIViewController{
 
     @IBOutlet weak var bannerImageView: UIImageView!
     @IBOutlet weak var tableNews: UITableView!
     @IBOutlet weak var backToTopButton: UIButton!
+    @IBOutlet var divider: UIView!
+    @IBOutlet var homeLabel: UILabel!
+    @IBOutlet var menuButton: UIButton!
+    @IBOutlet var appOfficialLbl: UILabel!
+    @IBOutlet var poweredBy: UIImageView!
+    @IBOutlet var footer1: UIImageView!
+    @IBOutlet var footer2: UIImageView!
+    @IBOutlet var topButton: UIButton!
+    @IBOutlet var banner: UIImageView!
     
     var refreshControl: UIRefreshControl!
     var gettingNews = false
 
     var selectedNews : News?
     
+    var moviePlayer : AVPlayer!
+
     var newsFromTable: [News] = [] {
         didSet {
             
         }
     }
-    
+
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.shared.isStatusBarHidden = false
+
+        if AppUtility.isBSC(){
+            prepareUI()
+        }
         bannerImageView.isHidden = true
-        
         navigationController?.navigationBar.isHidden = true
-        
         setRefreshControl()
-        askForNews(pageCount: UserDefaults.standard.integer(forKey: "pageCount"))
         
+        if AppUtility.isBSC(){
+            askForBSCNews(pageCount: UserDefaults.standard.integer(forKey: "pageCount"), primerid: UserDefaults.standard.integer(forKey: "primerId"), ultimoid: UserDefaults.standard.integer(forKey: "ultimoId"))
+        }else{
+            askForNews(pageCount: UserDefaults.standard.integer(forKey: "pageCount"))
+        }
         setBackToTopButton()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         loadImageBanner()
-        
         AppUtility.lockOrientation(.portrait)
-        
     }
 
+    //MARK: - UI
+    private func prepareUI(){
+        banner.isHidden = false
+        divider.backgroundColor = Color.yellow.color
+        homeLabel.textColor = Color.black.color
+        appOfficialLbl.isHidden = true
+        poweredBy.isHidden = true
+        menuButton.setTitleColor(Color.yellow.color, for: .normal)
+    }
     
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "newsDetail" {
@@ -69,30 +93,15 @@ class NewsViewController: UIViewController{
         }
     }
     
-
-    @IBAction func viewDetailView(_ sender: UIButton) {
-        
-        let buttonPosition = sender.convert(CGPoint.zero, to: self.tableNews)
-        let indexPath = self.tableNews.indexPathForRow(at: buttonPosition)
-        
-        let newsAtIndexPath = newsFromTable[(indexPath?.row)!]
-        selectedNews = newsAtIndexPath
-        
-        switch selectedNews!.type! {
-        case .isNoticiaInfo:
-            self.performSegue(withIdentifier: "newsDetail", sender: nil)
-        case .isInfograf:
-            self.performSegue(withIdentifier: "showWebView", sender: selectedNews?.link)
-            break
-        case .isVideoNew:
-            self.performSegue(withIdentifier: "showWebView", sender: selectedNews?.link)
-            break
-        case .noType:
-            break
-        }
-        
+    //MARK: - @IBActions
+    @IBAction func menu(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func viewDetailView(_ sender: UIButton) {
+    }
+    
+    //MARK: - Helpers
     func setBackToTopButton () {
         
         self.backToTopButton.layer.cornerRadius = backToTopButton.bounds.width / 2
@@ -102,15 +111,12 @@ class NewsViewController: UIViewController{
     
     func backToTopAction()  {
         self.tableNews.scrollsToTop = true
-        
         let indexPath = IndexPath(row: 0, section: 0)
-        
         tableNews.scrollToRow(at: indexPath, at: .top, animated: true)
         
     }
     
     func setRefreshControl () {
-        
         refreshControl = UIRefreshControl()
         refreshControl.tintColor = .black
         refreshControl.addTarget(self, action: #selector(refreshAction), for: UIControlEvents.valueChanged)
@@ -118,11 +124,16 @@ class NewsViewController: UIViewController{
     }
     
     func refreshAction () {
-        
-        self.newsFromTable.removeAll()
         UserDefaults.standard.set(1, forKey: "pageCount")
         let pageCount = UserDefaults.standard.integer(forKey: "pageCount")
-        askForNews(pageCount: pageCount)
+        let primerId = UserDefaults.standard.integer(forKey: "primerId")
+        let ultimoId = UserDefaults.standard.integer(forKey: "ultimoId")
+
+        if AppUtility.isBSC(){
+            askForBSCNews(pageCount: pageCount, primerid: primerId, ultimoid: ultimoId)
+        }else{
+            askForNews(pageCount: pageCount)
+        }
     }
     
     func loadImageBanner() {
@@ -183,12 +194,61 @@ extension NewsViewController {
             UserDefaults.standard.set(pageCount, forKey: "pageCount")
             
             self.newsFromTable += news
-            print(self.newsFromTable.count)
+            print("NEWS: %@", self.newsFromTable.count)
             self.refreshControl.endRefreshing()
             self.tableNews.reloadData()
-
         })
+    }
+    
+    func askForBSCNews(pageCount: Int, primerid: Int?, ultimoid: Int?){
         
+        NetworkManagement.requestBSCNews(with: pageCount, primerid: primerid, ultimoid: ultimoid, completionHandler: {(newsFromNetwork, deletedNewsFromNetwork, error) in
+            
+            guard error == nil else {
+                print("-----ERROR en Endpoint -----")
+                print(error.debugDescription)
+                return self.displayAlert("Disculpe tenemos problemas con el servicio, intente nuevamente", completionHandler: {})
+            }
+            guard let news = newsFromNetwork else {
+                return
+            }
+            
+            guard let deletedNews = deletedNewsFromNetwork else {
+                return
+            }
+            
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+            self.gettingNews = false
+            UserDefaults.standard.set(pageCount, forKey: "pageCount")
+
+            self.newsFromTable += news
+            
+            guard let primerId = Int((news.first?.idNew)!) else {
+                return
+            }
+            
+            guard let ultimoId = Int((news.last?.idNew)!) else {
+                return
+            }
+
+            UserDefaults.standard.set(primerId, forKey: "primerId")
+            UserDefaults.standard.set(ultimoId, forKey: "ultimoId")
+
+            for deletedNew in deletedNews{
+                for new in self.newsFromTable{
+                    if deletedNew.idNew == new.idNew{
+                        if let index = self.newsFromTable.index(where: { $0.idNew == new.idNew }){
+                            self.newsFromTable.remove(at: index)
+                        }
+                    }
+                }
+            }
+            
+            print("NEWS: %@", self.newsFromTable.count)
+            self.refreshControl.endRefreshing()
+            self.tableNews.reloadData()
+        })
     }
 }
 
@@ -224,6 +284,21 @@ extension NewsViewController : UITableViewDelegate {
     }
 }
 
+//MARK: - NewsTableViewCellDelegate
+extension NewsViewController: NewsTableViewCellDelegate {
+
+    func seeMorePressed(newsCell: NewsTableViewCell) {
+        
+        guard let indexPath = tableNews.indexPath(for: newsCell) else {
+            print("Unable to get index path for cell in \(#file)")
+            return
+        }
+        
+        tableView(tableNews, didSelectRowAt: indexPath)
+    }
+}
+
+
 extension NewsViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -236,12 +311,11 @@ extension NewsViewController : UITableViewDataSource {
            return UITableViewCell()
         }
         
-        
         let newsAtIndexPath = newsFromTable[indexPath.row]
-        
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
+        newsCell.delegate = self
         newsCell.dataLabel.text = dateFormatter.string(from: newsAtIndexPath.date)
         newsCell.titleLable.text = newsAtIndexPath.tittle
         newsCell.newsImage.image = newsAtIndexPath.image
@@ -278,8 +352,14 @@ extension NewsViewController : UITableViewDataSource {
                 loading.mode = .indeterminate
                 
                 let pageCount = UserDefaults.standard.integer(forKey: "pageCount") + 1
-                
-                self.askForNews(pageCount: pageCount)
+                let primerId = UserDefaults.standard.integer(forKey: "primerId")
+                let ultimoId = UserDefaults.standard.integer(forKey: "ultimoId")
+
+                if AppUtility.isBSC(){
+                    askForBSCNews(pageCount: pageCount, primerid: primerId, ultimoid: ultimoId)
+                }else{
+                    self.askForNews(pageCount: pageCount)
+                }
                 
             }
             

@@ -18,8 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         BuddyBuildSDK.setup()
-        FirebaseApp.configure()
+        configureGoogleService()
         
+        TestFairy.begin("e69706d9c8ab3e4c27dfbbe994b669696b37adf1")
+
         UserDefaults.standard.set(1, forKey: "pageCount")
         
         UNUserNotificationCenter.current().delegate = self
@@ -70,6 +72,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return self.orientationLock
     }
 
+    private func configureGoogleService(){
+        let filePath : String
 
+        if AppUtility.isBSC(){
+            filePath = Bundle.main.path(forResource: "GoogleServiceBSC-Info", ofType: "plist")!
+        }else{
+            filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")!
+        }
+        
+        if let options = FirebaseOptions.init(contentsOfFile: filePath){
+            FirebaseApp.configure(options: options)
+            
+        }
+    }
 }
 
